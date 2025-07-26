@@ -1,0 +1,817 @@
+/* 自定义CSS样式 - 模仿博客大图风格 */
+/* 引入外部字体 */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap");
+
+:root {
+  /* 主色调 - 温暖的紫色系 */
+  --vp-c-brand-1: #8b7ed8;
+  --vp-c-brand-2: #9d8df1;
+  --vp-c-brand-3: #b8a9ff;
+  --vp-c-brand-soft: rgba(139, 126, 216, 0.14);
+
+  /* 背景色 */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f6f6f7;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: #f6f6f7;
+
+  /* 文字颜色 */
+  --vp-c-text-1: #213547;
+  --vp-c-text-2: #476582;
+  --vp-c-text-3: #7c8b9c;
+
+  /* 边框颜色 */
+  --vp-c-divider: rgba(60, 60, 67, 0.12);
+  --vp-c-border: rgba(60, 60, 67, 0.12);
+
+  /* 字体设置 */
+  --vp-font-family-base: "Chinese Quotes", "Inter var", "Inter", ui-sans-serif,
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Helvetica, Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --vp-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas,
+    "Liberation Mono", Menlo, monospace;
+}
+
+/* 深色模式 */
+.dark {
+  --vp-c-bg: #1b1b1f;
+  --vp-c-bg-alt: #161618;
+  --vp-c-bg-elv: #202127;
+  --vp-c-bg-soft: #202127;
+
+  --vp-c-text-1: rgba(255, 255, 245, 0.86);
+  --vp-c-text-2: rgba(235, 235, 245, 0.6);
+  --vp-c-text-3: rgba(235, 235, 245, 0.38);
+
+  --vp-c-divider: rgba(84, 84, 88, 0.65);
+  --vp-c-border: rgba(82, 82, 89, 0.68);
+}
+
+/* 导航栏样式 */
+.VPNav {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.dark .VPNav {
+  background-color: rgba(27, 27, 31, 0.85);
+}
+
+/* Logo样式 */
+.VPNavBarTitle .logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* 首页Hero区域样式 */
+.VPHero {
+  padding-top: 120px !important;
+  padding-bottom: 150px !important;
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  overflow: hidden;
+  margin-bottom: 0;
+  margin-top: 0 !important;
+}
+
+/* Hero区域背景装饰 */
+.VPHero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 80%,
+      rgba(120, 119, 198, 0.3) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 119, 198, 0.3) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      rgba(120, 219, 255, 0.2) 0%,
+      transparent 50%
+    );
+  z-index: 1;
+}
+
+/* Hero内容层级 */
+.VPHero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.VPHero .name {
+  color: #78797a;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 20px !important;
+}
+
+.VPHero .text {
+  color: #d6d9db;
+  font-size: 3rem;
+  line-height: 1.4;
+  font-family: "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  text-shadow: 3px 3px 20px rgba(255, 255, 255, 0.8);
+  margin-bottom: 15px !important;
+}
+
+.VPHero .tagline {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-family: "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px !important;
+  position: relative;
+}
+
+/* 彩条装饰效果 - 使用外部SVG文件 */
+.VPHero .tagline::after {
+  content: "";
+  display: block;
+  width: calc(100% - 0.7em);
+  height: 11px;
+  margin: 1em 0 0 0.2em;
+  background-image: url("/images/rainbow-bar.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+  position: relative;
+  z-index: 1;
+  animation: colorShift 4s ease-in-out infinite;
+  filter: drop-shadow(0 2px 4px rgba(139, 126, 216, 0.3));
+}
+
+@keyframes colorShift {
+  0%,
+  100% {
+    filter: drop-shadow(0 2px 4px rgba(139, 126, 216, 0.3)) hue-rotate(0deg);
+  }
+  25% {
+    filter: drop-shadow(0 2px 4px rgba(157, 141, 241, 0.3)) hue-rotate(45deg);
+  }
+  50% {
+    filter: drop-shadow(0 2px 4px rgba(184, 169, 255, 0.3)) hue-rotate(90deg);
+  }
+  75% {
+    filter: drop-shadow(0 2px 4px rgba(167, 139, 250, 0.3)) hue-rotate(135deg);
+  }
+}
+
+.VPHero .image .image-container {
+  transform: translate(20px, 0px);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: visible;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 60px rgba(139, 126, 216, 0.3),
+    0 0 120px rgba(157, 141, 241, 0.2), 0 0 180px rgba(184, 169, 255, 0.1);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: breathing-light 3s ease-in-out infinite;
+}
+
+/* 呼吸灯外层光环 */
+.VPHero .image .image-container::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  right: -30px;
+  bottom: -30px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #8b7ed8,
+    #9d8df1,
+    #b8a9ff,
+    #a78bfa,
+    #8b7ed8
+  );
+  z-index: 1;
+  animation: rotate-gradient 8s linear infinite;
+  opacity: 0.8;
+  filter: blur(25px);
+  pointer-events: none;
+}
+
+/* 呼吸灯内层光晕 */
+.VPHero .image .image-container::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(139, 126, 216, 0.8) 0%,
+    rgba(157, 141, 241, 0.4) 40%,
+    rgba(184, 169, 255, 0.2) 70%,
+    transparent 100%
+  );
+  z-index: 1;
+  animation: breathing-pulse 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes rotate-gradient {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+/* 呼吸灯动画 */
+@keyframes breathing-light {
+  0%,
+  100% {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15),
+      0 0 60px rgba(139, 126, 216, 0.3), 0 0 120px rgba(157, 141, 241, 0.2),
+      0 0 180px rgba(184, 169, 255, 0.1), 0 0 0 0 rgba(139, 126, 216, 0.7);
+  }
+  50% {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15),
+      0 0 80px rgba(139, 126, 216, 0.5), 0 0 160px rgba(157, 141, 241, 0.3),
+      0 0 240px rgba(184, 169, 255, 0.2), 0 0 0 20px rgba(139, 126, 216, 0.3);
+  }
+}
+
+@keyframes breathing-pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.VPHero .image .image-container:hover {
+  animation: record-rotation 10s linear infinite;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.VPHero .image .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+/* 图片源样式 */
+.VPHero .image .image-container .image-src {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes record-rotation {
+  from {
+    transform: translate(20px, 0px) rotate(0deg);
+  }
+  to {
+    transform: translate(20px, 0px) rotate(360deg);
+  }
+}
+
+/* 优化字体渲染 */
+.VPHero .name,
+.VPHero .text,
+.VPHero .tagline {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 特性卡片样式 */
+.VPFeatures {
+  margin-top: 40px;
+}
+
+.VPFeature {
+  border: 1px solid var(--vp-c-border);
+  border-radius: 12px;
+  padding: 24px;
+  background: var(--vp-c-bg-soft);
+  transition: all 0.3s ease;
+}
+
+.VPFeature:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 126, 216, 0.15);
+}
+
+.VPFeature .icon {
+  font-size: 2em;
+  margin-bottom: 16px;
+  filter: hue-rotate(280deg);
+}
+
+/* 文章卡片样式 */
+.blog-card {
+  border: 1px solid var(--vp-c-border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  background: var(--vp-c-bg-soft);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.blog-card:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 126, 216, 0.15);
+}
+
+.blog-card h3 {
+  margin: 0 0 12px 0;
+  color: var(--vp-c-text-1);
+}
+
+.blog-card .meta {
+  font-size: 0.9em;
+  color: var(--vp-c-text-2);
+  margin-bottom: 12px;
+}
+
+.blog-card .excerpt {
+  color: var(--vp-c-text-2);
+  line-height: 1.6;
+}
+
+/* 标签样式 */
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  border-radius: 16px;
+  font-size: 0.85em;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  background: var(--vp-c-brand-1);
+  color: white;
+}
+
+/* 侧边栏样式 */
+.VPSidebar {
+  background: var(--vp-c-bg-alt);
+  border-right: 1px solid var(--vp-c-divider);
+}
+
+/* 内容区域样式 */
+.VPContent {
+  padding-top: 24px;
+}
+
+.vp-doc h1 {
+  border-bottom: 2px solid var(--vp-c-brand-1);
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+}
+
+.vp-doc h1:first-child {
+  margin-top: 0;
+}
+
+/* 代码块样式 */
+.vp-code-group {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-border);
+}
+
+/* 分页样式 */
+.VPDocFooter {
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 24px;
+  margin-top: 32px;
+}
+
+/* 响应式设计 */
+
+/* 中等屏幕断点 (960px以下) */
+@media (max-width: 960px) {
+  .VPHero {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+    margin-top: 0 !important;
+  }
+
+  .VPHero .container {
+    max-width: 100% !important;
+    padding: 0 20px !important;
+  }
+
+  .VPHero .name {
+    font-size: 2.2rem !important;
+    margin-bottom: 30px !important;
+    text-align: center !important;
+    margin-top: 40px !important;
+  }
+
+  .VPHero .text {
+    font-size: 2.2rem !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+  }
+
+  .VPHero .tagline {
+    font-size: 1rem !important;
+    text-align: center !important;
+    margin-bottom: 25px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* 中等屏幕彩条装饰效果 */
+  .VPHero .tagline::after {
+    width: 200px !important;
+    height: 10px !important;
+    margin: 15px auto 0 !important;
+    background-size: contain !important;
+  }
+
+  .VPHero .image {
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 40px !important;
+  }
+
+  .VPHero .image .image-container {
+    transform: translate(0, 0) !important;
+    width: 350px !important;
+    height: 350px !important;
+    margin: 0 auto !important;
+  }
+
+  .VPHero .image .image-container .image-src {
+    transform: translate(-50%, -50%) !important;
+    left: 50% !important;
+    top: 50% !important;
+  }
+
+  @keyframes record-rotation-medium {
+    from {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    to {
+      transform: translate(0, 0) rotate(360deg);
+    }
+  }
+
+  .VPHero .image .image-container:hover {
+    animation: record-rotation-medium 10s linear infinite;
+  }
+}
+
+/* 小屏幕断点 (768px以下) */
+@media (max-width: 768px) {
+  .VPHero {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+    margin-top: 0 !important;
+  }
+
+  .VPHero .container {
+    padding: 0 15px !important;
+  }
+
+  .VPHero .name {
+    font-size: 1.8rem !important;
+    margin-bottom: 25px !important;
+    margin-top: 30px !important;
+  }
+
+  .VPHero .text {
+    font-size: 1.8rem !important;
+    margin-bottom: 15px !important;
+  }
+
+  .VPHero .tagline {
+    font-size: 0.9rem !important;
+    margin-bottom: 20px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* 移动端彩条装饰效果 */
+  .VPHero .tagline::after {
+    width: 150px !important;
+    height: 8px !important;
+    margin: 12px auto 0 !important;
+  }
+
+  .VPHero .image {
+    margin-top: 30px !important;
+  }
+
+  .VPHero .image .image-container {
+    width: 280px !important;
+    height: 280px !important;
+  }
+
+  /* 移动端呼吸灯外层光环 */
+  .VPHero .image .image-container::before {
+    top: -15px !important;
+    left: -15px !important;
+    right: -15px !important;
+    bottom: -15px !important;
+    filter: blur(15px) !important;
+  }
+
+  /* 移动端呼吸灯内层光晕 */
+  .VPHero .image .image-container::after {
+    top: -8px !important;
+    left: -8px !important;
+    right: -8px !important;
+    bottom: -8px !important;
+  }
+
+  @keyframes record-rotation-mobile {
+    from {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    to {
+      transform: translate(0, 0) rotate(360deg);
+    }
+  }
+
+  @keyframes breathing-light-mobile {
+    0%,
+    100% {
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15),
+        0 0 40px rgba(139, 126, 216, 0.25), 0 0 80px rgba(157, 141, 241, 0.15),
+        0 0 120px rgba(184, 169, 255, 0.08), 0 0 0 0 rgba(139, 126, 216, 0.5);
+    }
+    50% {
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15),
+        0 0 60px rgba(139, 126, 216, 0.4), 0 0 120px rgba(157, 141, 241, 0.25),
+        0 0 180px rgba(184, 169, 255, 0.15), 0 0 0 15px rgba(139, 126, 216, 0.2);
+    }
+  }
+
+  .blog-card {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+/* 超小屏幕断点 (480px以下) */
+@media (max-width: 480px) {
+  .VPHero {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+    margin-top: 0 !important;
+  }
+
+  .VPHero .container {
+    padding: 0 10px !important;
+  }
+
+  .VPHero .name {
+    font-size: 1.5rem !important;
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+  }
+
+  .VPHero .text {
+    font-size: 1.5rem !important;
+    margin-bottom: 12px !important;
+  }
+
+  .VPHero .tagline {
+    font-size: 0.8rem !important;
+    margin-bottom: 15px !important;
+  }
+
+  .VPHero .tagline::after {
+    width: 120px !important;
+    height: 6px !important;
+    margin: 10px auto 0 !important;
+  }
+
+  .VPHero .image {
+    margin-top: 25px !important;
+  }
+
+  .VPHero .image .image-container {
+    width: 240px !important;
+    height: 240px !important;
+  }
+
+  .VPHero .image .image-container::before {
+    top: -12px !important;
+    left: -12px !important;
+    right: -12px !important;
+    bottom: -12px !important;
+    filter: blur(12px) !important;
+  }
+
+  .VPHero .image .image-container::after {
+    top: -6px !important;
+    left: -6px !important;
+    right: -6px !important;
+    bottom: -6px !important;
+  }
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vp-c-bg-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-brand-1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-2);
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* 友情链接样式 */
+.friend-link {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: var(--vp-c-text-1);
+  transition: all 0.3s ease;
+}
+
+.friend-link:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateX(4px);
+}
+
+.friend-link img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.friend-link .info h4 {
+  margin: 0 0 4px 0;
+  font-size: 1em;
+}
+
+.friend-link .info p {
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--vp-c-text-2);
+}
+
+/* 确保 Hero 区域与波浪的衔接 */
+.VPHome .VPHero {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* 全局响应式布局修复 */
+.VPContent {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+.VPContent.has-sidebar {
+  max-width: 100% !important;
+}
+
+/* 导航栏宽度修复 */
+.VPNav .content {
+  max-width: 100% !important;
+}
+
+.VPNav .content-body {
+  max-width: 100% !important;
+}
+
+/* 修复导航栏响应式问题 */
+@media (max-width: 960px) {
+  .VPNav .content {
+    padding: 0 20px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .VPNav .content {
+    padding: 0 15px !important;
+  }
+
+  /* 修复移动端导航菜单 */
+  .VPNav .VPNavBarMenu {
+    position: fixed !important;
+    top: 64px !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: var(--vp-c-bg) !important;
+    border-top: 1px solid var(--vp-c-divider) !important;
+    z-index: 1000 !important;
+    max-height: calc(100vh - 64px) !important;
+    overflow-y: auto !important;
+  }
+
+  .VPNav .VPNavBarMenu .VPNavBarMenuLink {
+    padding: 12px 20px !important;
+    border-bottom: 1px solid var(--vp-c-divider) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .VPNav .content {
+    padding: 0 10px !important;
+  }
+}
+
+/* 添加CSS变量以支持波浪组件的颜色 */
+:root {
+  --vp-c-bg-rgb: 255, 255, 255;
+}
+
+.dark {
+  --vp-c-bg-rgb: 26, 26, 26;
+}

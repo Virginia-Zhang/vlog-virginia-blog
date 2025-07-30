@@ -1,0 +1,55 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4a3f8b;stop-opacity:0.35" />
+      <stop offset="25%" style="stop-color:#5a4fa1;stop-opacity:0.45" />
+      <stop offset="50%" style="stop-color:#6a5fb7;stop-opacity:0.4" />
+      <stop offset="75%" style="stop-color:#4a3f8b;stop-opacity:0.45" />
+      <stop offset="100%" style="stop-color:#3a2f7a;stop-opacity:0.35" />
+    </linearGradient>
+    <radialGradient id="grad2" cx="70%" cy="30%" r="60%">
+      <stop offset="0%" style="stop-color:#3a2f7a;stop-opacity:0.25" />
+      <stop offset="100%" style="stop-color:#2a1f6a;stop-opacity:0.15" />
+    </radialGradient>
+  </defs>
+  
+  <!-- 背景渐变 -->
+  <rect width="1920" height="1080" fill="url(#grad2)"/>
+  
+  <!-- 多层波浪绸带1 -->
+  <path d="M-500 200 Q-200 100 100 200 T700 200 L1100 300 Q700 400 300 300 T-100 300 L-300 200 Z" 
+        fill="url(#grad1)" opacity="0.8"/>
+  
+  <!-- 多层波浪绸带2 -->
+  <path d="M-300 450 Q0 350 300 450 T900 450 L1300 550 Q900 650 500 550 T100 550 L-100 450 Z" 
+        fill="url(#grad1)" opacity="0.7"/>
+  
+  <!-- 多层波浪绸带3 -->
+  <path d="M-100 700 Q200 600 500 700 T1100 700 L1500 800 Q1100 900 700 800 T300 800 L100 700 Z" 
+        fill="url(#grad1)" opacity="0.6"/>
+  
+  <!-- 多层波浪绸带4 -->
+  <path d="M100 950 Q400 850 700 950 T1300 950 L1700 1050 Q1300 1150 900 1050 T500 1050 L300 950 Z" 
+        fill="url(#grad1)" opacity="0.5"/>
+  
+  <!-- 装饰性圆点阵列 -->
+  <g opacity="0.7">
+    <circle cx="1600" cy="100" r="3" fill="#6a5fb7"/>
+    <circle cx="1650" cy="120" r="2" fill="#5a4fa1"/>
+    <circle cx="1700" cy="140" r="4" fill="#4a3f8b"/>
+    <circle cx="1750" cy="160" r="2" fill="#3a2f7a"/>
+    <circle cx="1800" cy="180" r="3" fill="#6a5fb7"/>
+  </g>
+  
+  <g opacity="0.7">
+    <circle cx="100" cy="800" r="3" fill="#5a4fa1"/>
+    <circle cx="150" cy="820" r="2" fill="#4a3f8b"/>
+    <circle cx="200" cy="840" r="4" fill="#3a2f7a"/>
+    <circle cx="250" cy="860" r="2" fill="#6a5fb7"/>
+    <circle cx="300" cy="880" r="3" fill="#5a4fa1"/>
+  </g>
+  
+  <!-- 装饰性线条 -->
+  <path d="M1400 150 Q1500 100 1600 150" stroke="#4a3f8b" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M200 850 Q300 800 400 850" stroke="#3a2f7a" stroke-width="2" fill="none" opacity="0.6"/>
+</svg> 

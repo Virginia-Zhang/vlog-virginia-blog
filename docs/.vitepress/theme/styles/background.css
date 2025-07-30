@@ -1,0 +1,59 @@
+/* 背景样式 */
+
+/* 引入外部字体 */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap");
+
+/* 设置html根字体大小 */
+html {
+  font-size: 16px;
+}
+
+/* 网站背景图装饰 */
+.VPContent {
+  position: relative;
+  background: none;
+}
+
+.VPContent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/images/backgrounds/ribbon-1.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: background-fade-rotation 40s infinite;
+  z-index: -1;
+}
+
+/* 背景图蒙层效果 */
+.VPContent::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(139, 126, 216, 0.1),
+    rgba(157, 141, 241, 0.1)
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* 深色模式背景图动画 */
+.dark .VPContent::before {
+  animation: background-fade-rotation-dark 40s infinite;
+}
+
+/* 去掉文章页面底部多余的边框线和padding */
+.VPDocFooter {
+  border-top: none !important;
+  padding-top: 0 !important;
+}

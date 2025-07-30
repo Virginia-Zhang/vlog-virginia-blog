@@ -1,0 +1,232 @@
+/* 组件样式 */
+
+/* 导航栏样式 */
+.VPNav {
+  position: fixed !important;
+  top: 0 !important;
+  background-color: var(--vp-nav-bg-color);
+}
+
+.VPLocalNav {
+  position: fixed !important;
+  top: var(--vp-layout-top-height) !important;
+  padding-top: 0 !important;
+}
+
+.VPNavBarTitle .logo {
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  width: 30px !important;
+  height: 30px !important;
+  margin-right: 12px !important;
+  transition: all 0.3s ease !important;
+}
+
+.VPNavBarTitle .logo:hover {
+  transform: scale(1.1) !important;
+}
+
+/* 特性卡片样式 */
+.VPFeatures {
+  margin-top: 40px;
+}
+
+.VPFeature {
+  border: 1px solid var(--vp-c-border);
+  border-radius: 12px;
+  padding: 24px;
+  background: var(--vp-c-bg-soft);
+  transition: all 0.3s ease;
+}
+
+.VPFeature:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 126, 216, 0.15);
+}
+
+.VPFeature .icon {
+  font-size: 2em;
+  margin-bottom: 16px;
+  filter: hue-rotate(280deg);
+}
+
+/* 文章卡片样式 */
+.blog-card {
+  border: 1px solid var(--vp-c-border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  background: var(--vp-c-bg-soft);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.blog-card:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(139, 126, 216, 0.15);
+}
+
+.blog-card h3 {
+  margin: 0 0 12px 0;
+  color: var(--vp-c-text-1);
+}
+
+.blog-card .meta {
+  font-size: 0.9em;
+  color: var(--vp-c-text-2);
+  margin-bottom: 12px;
+}
+
+.blog-card .excerpt {
+  color: var(--vp-c-text-2);
+  line-height: 1.6;
+}
+
+/* 标签样式 */
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  border-radius: 16px;
+  font-size: 0.85em;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  background: var(--vp-c-brand-1);
+  color: white;
+}
+
+/* 侧边栏样式 */
+.VPSidebar {
+  background: var(--vp-c-bg-alt);
+  border-right: 1px solid var(--vp-c-divider);
+}
+
+/* 内容区域样式 */
+.VPContent {
+  padding-top: 0 !important;
+  max-width: 100% !important;
+  overflow: auto !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.VPContent.has-sidebar {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* 文档样式 */
+.vp-doc h1 {
+  border-bottom: 2px solid var(--vp-c-brand-1);
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+}
+
+.vp-doc h1:first-child {
+  margin-top: 0;
+}
+
+/* 代码块样式 */
+.vp-code-group {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--vp-c-border);
+}
+
+/* 分页样式 */
+.VPDocFooter {
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 24px;
+  margin-top: 32px;
+}
+
+/* 友情链接样式 */
+.friend-link {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: var(--vp-c-text-1);
+  transition: all 0.3s ease;
+}
+
+.friend-link:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateX(4px);
+}
+
+.friend-link img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.friend-link .info h4 {
+  margin: 0 0 4px 0;
+  font-size: 1em;
+}
+
+.friend-link .info p {
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--vp-c-text-2);
+}
+
+/* 动画效果类 */
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vp-c-bg-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-brand-1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-2);
+}
+
+/* 全局布局修复 */
+body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+#app {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* 确保 Hero 区域与波浪的衔接 */
+.VPHome .VPHero {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.aside-curtain {
+  background: transparent !important;
+}

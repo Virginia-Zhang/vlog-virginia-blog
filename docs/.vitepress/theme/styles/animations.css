@@ -1,0 +1,186 @@
+/* 动画定义 */
+
+/* 背景图切换动画 */
+@keyframes background-fade-rotation {
+  0%,
+  18% {
+    background-image: url("/images/backgrounds/ribbon-1.svg");
+    opacity: 1;
+  }
+  20%,
+  25% {
+    background-image: url("/images/backgrounds/ribbon-1.svg");
+    opacity: 0;
+  }
+  27%,
+  45% {
+    background-image: url("/images/backgrounds/ribbon-2.svg");
+    opacity: 1;
+  }
+  47%,
+  52% {
+    background-image: url("/images/backgrounds/ribbon-2.svg");
+    opacity: 0;
+  }
+  54%,
+  72% {
+    background-image: url("/images/backgrounds/ribbon-3.svg");
+    opacity: 1;
+  }
+  74%,
+  79% {
+    background-image: url("/images/backgrounds/ribbon-3.svg");
+    opacity: 0;
+  }
+  81%,
+  99% {
+    background-image: url("/images/backgrounds/ribbon-4.svg");
+    opacity: 1;
+  }
+  101%,
+  106% {
+    background-image: url("/images/backgrounds/ribbon-4.svg");
+    opacity: 0;
+  }
+  108%,
+  126% {
+    background-image: url("/images/backgrounds/ribbon-5.svg");
+    opacity: 1;
+  }
+  128%,
+  133% {
+    background-image: url("/images/backgrounds/ribbon-5.svg");
+    opacity: 0;
+  }
+}
+
+/* 深色模式背景图动画 */
+@keyframes background-fade-rotation-dark {
+  0%,
+  18% {
+    background-image: url("/images/backgrounds/ribbon-dark-1.svg");
+    opacity: 1;
+  }
+  20%,
+  25% {
+    background-image: url("/images/backgrounds/ribbon-dark-1.svg");
+    opacity: 0;
+  }
+  27%,
+  45% {
+    background-image: url("/images/backgrounds/ribbon-dark-2.svg");
+    opacity: 1;
+  }
+  47%,
+  52% {
+    background-image: url("/images/backgrounds/ribbon-dark-2.svg");
+    opacity: 0;
+  }
+  54%,
+  72% {
+    background-image: url("/images/backgrounds/ribbon-dark-3.svg");
+    opacity: 1;
+  }
+  74%,
+  79% {
+    background-image: url("/images/backgrounds/ribbon-dark-3.svg");
+    opacity: 0;
+  }
+  81%,
+  99% {
+    background-image: url("/images/backgrounds/ribbon-dark-4.svg");
+    opacity: 1;
+  }
+  101%,
+  106% {
+    background-image: url("/images/backgrounds/ribbon-dark-4.svg");
+    opacity: 0;
+  }
+  108%,
+  126% {
+    background-image: url("/images/backgrounds/ribbon-dark-5.svg");
+    opacity: 1;
+  }
+  128%,
+  133% {
+    background-image: url("/images/backgrounds/ribbon-dark-5.svg");
+    opacity: 0;
+  }
+}
+
+/* 彩条颜色变换动画 */
+@keyframes colorShift {
+  0%,
+  100% {
+    filter: drop-shadow(0 2px 4px rgba(139, 126, 216, 0.3)) hue-rotate(0deg);
+  }
+  25% {
+    filter: drop-shadow(0 2px 4px rgba(157, 141, 241, 0.3)) hue-rotate(45deg);
+  }
+  50% {
+    filter: drop-shadow(0 2px 4px rgba(184, 169, 255, 0.3)) hue-rotate(90deg);
+  }
+  75% {
+    filter: drop-shadow(0 2px 4px rgba(167, 139, 250, 0.3)) hue-rotate(135deg);
+  }
+}
+
+/* 旋转渐变动画 */
+@keyframes rotate-gradient {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 呼吸灯动画 */
+@keyframes breathing-light {
+  0%,
+  100% {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15),
+      0 0 60px rgba(139, 126, 216, 0.3), 0 0 120px rgba(157, 141, 241, 0.2),
+      0 0 180px rgba(184, 169, 255, 0.1), 0 0 0 0 rgba(139, 126, 216, 0.7);
+  }
+  50% {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15),
+      0 0 80px rgba(139, 126, 216, 0.5), 0 0 160px rgba(157, 141, 241, 0.3),
+      0 0 240px rgba(184, 169, 255, 0.2), 0 0 0 20px rgba(139, 126, 216, 0.3);
+  }
+}
+
+/* 呼吸脉冲动画 */
+@keyframes breathing-pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* 唱片旋转动画 */
+@keyframes record-rotation {
+  from {
+    transform: translate(20px, 0px) rotate(0deg);
+  }
+  to {
+    transform: translate(20px, 0px) rotate(360deg);
+  }
+}
+
+/* 淡入上升动画 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "Vlog-Virginia's Blog"
   text: "Recording Technical Growth and Life Insights"
-  tagline: "Slow steps, unwavering spirit"
+  tagline: "Slow steps, never retreat"
   image:
     src: /images/hero-image.svg
     alt: Virginia's Blog

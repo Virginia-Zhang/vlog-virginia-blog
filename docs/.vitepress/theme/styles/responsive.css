@@ -1,0 +1,264 @@
+/* 响应式设计 */
+
+/* 大屏幕断点 (1280px以下) */
+@media (max-width: 1280px) {
+  .VPDoc .container .content {
+    padding-top: 30px;
+  }
+}
+
+/* 大屏幕断点 (1200px以下) */
+@media (max-width: 1200px) {
+  .VPHero {
+    padding-top: 100px !important;
+    padding-bottom: 180px !important;
+    padding-left: 60px !important;
+    margin-top: 0 !important;
+  }
+  .VPHero .text {
+    font-size: 2.5rem;
+    width: 460px;
+  }
+  .VPHero .image .image-container {
+    width: 300px !important;
+    height: 300px !important;
+  }
+}
+
+/* 中等屏幕断点 (960px以下) */
+@media (max-width: 960px) {
+  .VPHero {
+    padding-left: 40px !important;
+  }
+  .VPHero .container {
+    padding: 0 20px !important;
+  }
+
+  .VPHero .name {
+    font-size: 2.2rem !important;
+    text-align: center !important;
+    margin-top: 80px !important;
+  }
+
+  .VPHero .text {
+    font-size: 2.2rem !important;
+    text-align: center !important;
+  }
+
+  .VPHero .tagline {
+    font-size: 1rem !important;
+    text-align: center !important;
+  }
+
+  /* 修复彩虹条位置 */
+  .VPHero .tagline::after {
+    width: 200px !important;
+    height: 10px !important;
+    margin: 15px auto 0 !important;
+    background-size: contain !important;
+  }
+
+  .VPHero .image {
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 40px !important;
+  }
+
+  .VPHero .image .image-container {
+    transform: translate(0, 0) !important;
+    width: 300px !important;
+    height: 300px !important;
+    margin: 0 auto !important;
+  }
+
+  .VPDoc .container .content {
+    padding-top: 100px;
+  }
+}
+
+/* 屏幕宽度小于860px时，显示右侧汉堡折叠菜单 */
+@media (max-width: 860px) {
+  .VPNav .VPNavBar .wrapper {
+    padding: 0 0 0 24px;
+  }
+  .VPNavBarMenu {
+    display: none !important;
+  }
+  .VPNavBarExtra {
+    display: none !important;
+  }
+  .VPNavBarHamburger {
+    display: flex !important;
+  }
+  .VPNavScreen {
+    display: block !important;
+    top: var(--vp-layout-top-height) !important;
+  }
+  .VPNavBarSearch {
+    flex-grow: 0;
+    padding-left: 0;
+  }
+  .DocSearch-Button {
+    justify-content: flex-start;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 0 10px 0 12px;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+  }
+  .DocSearch-Button .DocSearch-Search-Icon {
+    width: 16px;
+    height: 16px;
+    color: var(--vp-c-text-1) rgba(255, 255, 245, 0.86);
+  }
+  .DocSearch-Button .DocSearch-Button-Placeholder {
+    display: none !important;
+  }
+  .DocSearch-Button .DocSearch-Button-Keys {
+    display: none !important;
+  }
+}
+
+/* 小屏幕断点 (768px以下) */
+@media (max-width: 768px) {
+  .VPNavBarMenu {
+    display: none !important;
+  }
+  .VPNavBarExtra {
+    display: none !important;
+  }
+  .VPNavBarHamburger {
+    display: flex !important;
+  }
+  .VPNavScreen {
+    display: block !important;
+  }
+  .VPHero {
+    padding-top: 80px !important;
+    padding-bottom: 150px !important;
+    padding-left: 30px !important;
+    margin-top: 0 !important;
+  }
+
+  .VPHero .container {
+    padding: 0 15px !important;
+    max-width: 100% !important;
+  }
+
+  .VPHero .name {
+    font-size: 1.8rem !important;
+    margin-bottom: 25px !important;
+    margin-top: 80px !important;
+  }
+
+  .VPHero .text {
+    font-size: 1.8rem !important;
+    margin-bottom: 15px !important;
+  }
+
+  .VPHero .tagline {
+    font-size: 0.9rem !important;
+    margin-bottom: 20px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* 移动端彩条装饰效果 */
+  .VPHero .tagline::after {
+    width: 150px !important;
+    height: 8px !important;
+    margin: 12px auto 0 !important;
+  }
+
+  .VPHero .image {
+    margin-top: 30px !important;
+  }
+
+  .VPHero .image .image-container {
+    width: 280px !important;
+    height: 280px !important;
+  }
+
+  /* 移动端呼吸灯外层光环 */
+  .VPHero .image .image-container::before {
+    top: -15px !important;
+    left: -15px !important;
+    right: -15px !important;
+    bottom: -15px !important;
+    filter: blur(15px) !important;
+  }
+
+  /* 移动端呼吸灯内层光晕 */
+  .VPHero .image .image-container::after {
+    top: -8px !important;
+    left: -8px !important;
+    right: -8px !important;
+    bottom: -8px !important;
+  }
+
+  .blog-card {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+/* 超小屏幕断点 (480px以下) */
+@media (max-width: 480px) {
+  .VPHero {
+    padding-top: 30px !important;
+    padding-bottom: 120px !important;
+    padding-left: 24px !important;
+    margin-top: 0 !important;
+  }
+
+  .VPHero .container {
+    padding: 0 10px !important;
+  }
+
+  .VPHero .name {
+    font-size: 1.5rem !important;
+    margin-bottom: 20px !important;
+    margin-top: 70px !important;
+  }
+
+  .VPHero .text {
+    font-size: 1.5rem !important;
+    width: fit-content;
+    margin-bottom: 12px !important;
+  }
+
+  .VPHero .tagline {
+    font-size: 0.8rem !important;
+    margin-bottom: 15px !important;
+  }
+
+  .VPHero .tagline::after {
+    width: 120px !important;
+    height: 6px !important;
+    margin: 10px auto 0 !important;
+  }
+
+  .VPHero .image {
+    margin-top: 25px !important;
+  }
+
+  .VPHero .image .image-container {
+    width: 240px !important;
+    height: 240px !important;
+  }
+
+  .VPHero .image .image-container::before {
+    top: -12px !important;
+    left: -12px !important;
+    right: -12px !important;
+    bottom: -12px !important;
+    filter: blur(12px) !important;
+  }
+
+  .VPHero .image .image-container::after {
+    top: -6px !important;
+    left: -6px !important;
+    right: -6px !important;
+    bottom: -6px !important;
+  }
+}

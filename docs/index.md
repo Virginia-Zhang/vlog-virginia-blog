@@ -5,7 +5,7 @@ description: 分享技术、外语学习与生活思考
 
 hero:
   name: "Vlog-Virginia's Blog"
-  text: "记录技术成长、外语学习与生活思考"
+  text: "记录技术成长、外语学习与生活分享"
   tagline: "我走得很慢，但决不放弃"
   image:
     src: /images/hero-image.svg
@@ -45,48 +45,7 @@ features:
     link: /life/
 ---
 
-## 最新文章
-
-<div class="recent-posts">
-  <div class="blog-card fade-in-up">
-    <h3><a href="/frontend/vue/vue3-composition-api">Vue 3 Composition API 深度解析</a></h3>
-    <div class="meta">
-      <span>2024-01-15</span> · <span>前端开发</span> · <span>5 分钟阅读</span>
-    </div>
-    <p class="excerpt">深入了解 Vue 3 Composition API 的设计理念、核心特性以及在实际项目中的应用实践...</p>
-    <div class="tags">
-      <span class="tag">Vue3</span>
-      <span class="tag">Composition API</span>
-      <span class="tag">JavaScript</span>
-    </div>
-  </div>
-
-  <div class="blog-card fade-in-up">
-    <h3><a href="/backend/nodejs/express-middleware">Express 中间件机制深度剖析</a></h3>
-    <div class="meta">
-      <span>2024-01-12</span> · <span>后端开发</span> · <span>8 分钟阅读</span>
-    </div>
-    <p class="excerpt">全面解析 Express.js 中间件的工作原理，从源码角度理解请求处理流程...</p>
-    <div class="tags">
-      <span class="tag">Node.js</span>
-      <span class="tag">Express</span>
-      <span class="tag">中间件</span>
-    </div>
-  </div>
-
-  <div class="blog-card fade-in-up">
-    <h3><a href="/devops/docker/container-optimization">Docker 容器性能优化实践</a></h3>
-    <div class="meta">
-      <span>2024-01-10</span> · <span>运维浅谈</span> · <span>6 分钟阅读</span>
-    </div>
-    <p class="excerpt">分享在生产环境中优化 Docker 容器性能的实用技巧和最佳实践...</p>
-    <div class="tags">
-      <span class="tag">Docker</span>
-      <span class="tag">性能优化</span>
-      <span class="tag">容器化</span>
-    </div>
-  </div>
-</div>
+<HomeContent />
 
 ## 关于博客
 
@@ -108,31 +67,3 @@ features:
 - **微信**: your-wechat-id
 
 让我们一起在技术的道路上不断成长！
-
-<style>
-.recent-posts {
-  margin-top: 2rem;
-}
-
-.recent-posts .blog-card {
-  margin-bottom: 1.5rem;
-}
-
-.recent-posts .blog-card:nth-child(2) {
-  animation-delay: 0.1s;
-}
-
-.recent-posts .blog-card:nth-child(3) {
-  animation-delay: 0.2s;
-}
-
-.recent-posts a {
-  text-decoration: none;
-  color: var(--vp-c-text-1);
-  font-weight: 600;
-}
-
-.recent-posts a:hover {
-  color: var(--vp-c-brand-1);
-}
-</style>

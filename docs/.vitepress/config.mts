@@ -2,57 +2,61 @@ import { defineConfig } from "vitepress";
 
 // 导航栏配置
 const nav = [
-  { text: "首页", link: "/" },
   {
-    text: "前端开发",
+    text: "代码人生",
     items: [
-      { text: "HTML/CSS", link: "/frontend/html-css/" },
-      { text: "JavaScript", link: "/frontend/javascript/" },
-      { text: "Vue", link: "/frontend/vue/" },
-      { text: "React", link: "/frontend/react/" },
-      { text: "优秀工具/库推荐", link: "/frontend/tools/" },
-      { text: "性能优化", link: "/frontend/performance/" },
-      { text: "其他", link: "/frontend/others/" },
+      {
+        text: "前端开发",
+        items: [
+          { text: "HTML/CSS", link: "/frontend/html-css/" },
+          { text: "JavaScript", link: "/frontend/javascript/" },
+          { text: "Vue", link: "/frontend/vue/" },
+          { text: "React", link: "/frontend/react/" },
+          { text: "优秀工具/库推荐", link: "/frontend/tools/" },
+          { text: "性能优化", link: "/frontend/performance/" },
+          { text: "其他", link: "/frontend/others/" },
+        ],
+      },
+      {
+        text: "后端开发",
+        items: [
+          { text: "Java", link: "/backend/java/" },
+          { text: "NodeJS", link: "/backend/nodejs/" },
+          { text: "数据库相关", link: "/backend/database/" },
+          { text: "性能优化", link: "/backend/performance/" },
+          { text: "其他", link: "/backend/others/" },
+        ],
+      },
+      {
+        text: "运维浅谈",
+        items: [
+          { text: "部署上线", link: "/devops/deployment/" },
+          { text: "Nginx", link: "/devops/nginx/" },
+          { text: "Docker", link: "/devops/docker/" },
+          { text: "Linux", link: "/devops/linux/" },
+          { text: "其他", link: "/devops/others/" },
+        ],
+      },
+      {
+        text: "项目杂谈",
+        items: [
+          { text: "那些年踩过的坑", link: "/projects/pitfalls/" },
+          { text: "优秀实践汇总", link: "/projects/best-practices/" },
+        ],
+      },
     ],
   },
   {
-    text: "后端开发",
-    items: [
-      { text: "Java", link: "/backend/java/" },
-      { text: "NodeJS", link: "/backend/nodejs/" },
-      { text: "数据库相关", link: "/backend/database/" },
-      { text: "性能优化", link: "/backend/performance/" },
-      { text: "其他", link: "/backend/others/" },
-    ],
-  },
-  {
-    text: "运维浅谈",
-    items: [
-      { text: "部署上线", link: "/devops/deployment/" },
-      { text: "Nginx", link: "/devops/nginx/" },
-      { text: "Docker", link: "/devops/docker/" },
-      { text: "Linux", link: "/devops/linux/" },
-      { text: "其他", link: "/devops/others/" },
-    ],
-  },
-  {
-    text: "项目杂谈",
-    items: [
-      { text: "那些年踩过的坑", link: "/projects/pitfalls/" },
-      { text: "优秀实践汇总", link: "/projects/best-practices/" },
-    ],
-  },
-  {
-    text: "外语学习",
+    text: "外语指北",
     items: [
       { text: "英语相关", link: "/languages/english/" },
       { text: "日语相关", link: "/languages/japanese/" },
       { text: "其他", link: "/languages/others/" },
     ],
   },
-  { text: "生活分享", link: "/life/" },
-  { text: "关于", link: "/about" },
-  { text: "友情链接", link: "/friends" },
+  { text: "生活切片", link: "/life/" },
+  { text: "关于", link: "/about/" },
+  { text: "友情链接", link: "/friends/" },
 ];
 
 // 侧边栏配置
@@ -123,6 +127,18 @@ const sidebar = {
         { text: "读书笔记", link: "/life/books/" },
         { text: "其他分享", link: "/life/others/" },
       ],
+    },
+  ],
+  "/about/": [
+    {
+      text: "关于我",
+      items: [{ text: "关于我", link: "/about/" }],
+    },
+  ],
+  "/friends/": [
+    {
+      text: "友情链接",
+      items: [{ text: "友情链接", link: "/friends/" }],
     },
   ],
 };
@@ -220,13 +236,6 @@ export default defineConfig({
           },
         },
       },
-    },
-
-    // 编辑链接
-    editLink: {
-      pattern:
-        "https://github.com/your-username/vlog-virginia-blog/edit/main/docs/:path",
-      text: "在 GitHub 上编辑此页面",
     },
 
     // 最后更新时间

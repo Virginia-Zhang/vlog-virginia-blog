@@ -38,10 +38,10 @@
 }
 
 .tk-banner-waves {
-  margin-top: -12vh;
+  margin-top: -11vh;
   position: relative;
   width: 100%;
-  height: 12vh;
+  height: 11vh;
   min-height: 50px;
   max-height: 150px;
   z-index: 10;
@@ -111,20 +111,122 @@
   fill: var(--vp-c-bg);
 }
 
-/* 响应式设计 */
-@media (max-width: 768px) {
+/* 响应式设计，综合考虑屏幕宽度和高度来控制wave的高度 */
+
+/* 手机竖屏 (宽度小于768px) */
+@media (max-width: 767px) {
   .tk-banner-waves {
-    height: 8vh;
-    min-height: 40px;
+    height: 6vh;
+    min-height: 30px;
+    margin-top: -6vh;
+  }
+}
+
+/* 手机横屏 (宽度768px-1023px，高度小于800px) */
+@media (min-width: 768px) and (max-width: 1023px) and (max-height: 800px) {
+  .tk-banner-waves {
+    height: 5vh;
+    min-height: 25px;
+    margin-top: -5vh;
+  }
+}
+
+/* 特殊宽高比手机 (宽度500px-600px，高度700px-800px) - 包括Surface Duo等设备 */
+@media (min-width: 500px) and (max-width: 600px) and (min-height: 700px) and (max-height: 800px) {
+  .tk-banner-waves {
+    height: 7vh;
+    min-height: 35px;
     margin-top: -7vh;
   }
 }
 
-@media (max-width: 480px) {
+/* 平板竖屏 (宽度768px-1023px，高度大于800px) */
+@media (min-width: 768px) and (max-width: 1023px) and (min-height: 800px) {
   .tk-banner-waves {
-    height: 6vh;
-    min-height: 30px;
-    margin-top: -5vh;
+    height: 7vh;
+    min-height: 35px;
+    margin-top: -7vh;
+  }
+}
+
+/* 小笔记本 (宽度1024px-1279px，高度小于900px) */
+@media (min-width: 1024px) and (max-width: 1279px) and (max-height: 900px) {
+  .tk-banner-waves {
+    height: 8vh;
+    min-height: 40px;
+    margin-top: -8vh;
+  }
+}
+
+/* 标准笔记本 (宽度1024px-1279px，高度900px-1100px) */
+@media (min-width: 1024px) and (max-width: 1279px) and (min-height: 900px) and (max-height: 1100px) {
+  .tk-banner-waves {
+    height: 9vh;
+    min-height: 45px;
+    margin-top: -9vh;
+  }
+}
+
+/* 大笔记本 (宽度1024px-1279px，高度大于1100px) */
+@media (min-width: 1024px) and (max-width: 1279px) and (min-height: 1100px) {
+  .tk-banner-waves {
+    height: 10vh;
+    min-height: 50px;
+    margin-top: -10vh;
+  }
+}
+
+/* 桌面显示器 (宽度大于1280px，高度小于1200px) */
+@media (min-width: 1280px) and (max-height: 1200px) {
+  .tk-banner-waves {
+    height: 10vh;
+    min-height: 50px;
+    margin-top: -10vh;
+  }
+}
+
+/* 标准桌面 (宽度大于1280px，高度1200px-1400px) */
+@media (min-width: 1280px) and (min-height: 1200px) and (max-height: 1400px) {
+  .tk-banner-waves {
+    height: 11vh;
+    min-height: 55px;
+    margin-top: -11vh;
+  }
+}
+
+/* 大桌面 (宽度大于1280px，高度大于1400px) */
+@media (min-width: 1280px) and (min-height: 1400px) {
+  .tk-banner-waves {
+    height: 12vh;
+    min-height: 60px;
+    margin-top: -12vh;
+  }
+}
+
+/* Surface Pro 7 特殊适配 (912x1368) */
+@media (min-width: 900px) and (max-width: 920px) and (min-height: 1350px) and (max-height: 1380px) {
+  .tk-banner-waves {
+    height: 10vh;
+    min-height: 50px;
+    margin-top: -10vh;
+  }
+}
+
+/* Surface Duo 特殊适配 (540x720) */
+@media (min-width: 530px) and (max-width: 550px) and (min-height: 710px) and (max-height: 730px) {
+  .tk-banner-waves {
+    height: 8vh;
+    min-height: 35px;
+    margin-top: -8vh;
+  }
+}
+
+/* 超宽屏适配 (宽度大于1920px) */
+@media (min-width: 1920px) {
+  .tk-banner-waves {
+    height: 13vh;
+    min-height: 65px;
+    margin-top: -13vh;
   }
 }
 

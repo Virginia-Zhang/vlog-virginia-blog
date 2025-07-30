@@ -1,0 +1,207 @@
+/* Hero组件样式 */
+
+/* 首页Hero区域样式 */
+.VPHero {
+  padding-top: 75px !important;
+  padding-bottom: 180px !important;
+  padding-left: 100px !important;
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin-bottom: 0;
+  margin-top: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.VPHero .container {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* Hero区域背景装饰 */
+.VPHero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      circle at 20% 80%,
+      rgba(120, 119, 198, 0.3) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 119, 198, 0.3) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      rgba(120, 219, 255, 0.2) 0%,
+      transparent 50%
+    );
+}
+
+/* Hero文字样式 */
+.VPHero .name {
+  color: #78797a;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 20px !important;
+}
+
+.VPHero .text {
+  color: #d6d9db;
+  font-size: 3rem;
+  line-height: 1.4;
+  font-family: "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  text-shadow: 3px 3px 20px rgb(216 215 215 / 80%);
+  margin-bottom: 15px !important;
+}
+
+.VPHero .tagline {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-family: "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px !important;
+  position: relative;
+}
+
+/* 彩条装饰效果 */
+.VPHero .tagline::after {
+  content: "";
+  display: block;
+  width: calc(100% - 0.7em);
+  height: 11px;
+  margin: 1em 0 0 0.2em;
+  background-image: url("/images/rainbow-bar.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+  position: relative;
+  z-index: 1;
+  animation: colorShift 4s ease-in-out infinite;
+  filter: drop-shadow(0 2px 4px rgba(139, 126, 216, 0.3));
+}
+
+/* Hero图片容器样式 */
+.VPHero .image .image-container {
+  transform: translate(20px, 0px);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: visible;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 60px rgba(139, 126, 216, 0.3),
+    0 0 120px rgba(157, 141, 241, 0.2), 0 0 180px rgba(184, 169, 255, 0.1);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: breathing-light 3s ease-in-out infinite;
+}
+
+/* 呼吸灯外层光环 */
+.VPHero .image .image-container::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  right: -30px;
+  bottom: -30px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #8b7ed8,
+    #9d8df1,
+    #b8a9ff,
+    #a78bfa,
+    #8b7ed8
+  );
+  z-index: 1;
+  animation: rotate-gradient 8s linear infinite;
+  opacity: 0.8;
+  filter: blur(25px);
+  pointer-events: none;
+}
+
+/* 呼吸灯内层光晕 */
+.VPHero .image .image-container::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(139, 126, 216, 0.8) 0%,
+    rgba(157, 141, 241, 0.4) 40%,
+    rgba(184, 169, 255, 0.2) 70%,
+    transparent 100%
+  );
+  z-index: 1;
+  animation: breathing-pulse 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* 图片悬停效果 */
+.VPHero .image .image-container:hover {
+  animation: record-rotation 10s linear infinite;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 图片样式 */
+.VPHero .image .image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+/* 图片源样式 */
+.VPHero .image .image-container .image-src {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 优化字体渲染 */
+.VPHero .name,
+.VPHero .text,
+.VPHero .tagline {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}

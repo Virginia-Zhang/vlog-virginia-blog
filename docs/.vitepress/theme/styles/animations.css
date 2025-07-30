@@ -3,52 +3,51 @@
 /* 背景图切换动画 */
 @keyframes background-fade-rotation {
   0%,
-  18% {
+  19% {
     background-image: url("/images/backgrounds/ribbon-1.svg");
     opacity: 1;
   }
   20%,
-  25% {
+  22% {
     background-image: url("/images/backgrounds/ribbon-1.svg");
     opacity: 0;
   }
-  27%,
-  45% {
+  23%,
+  39% {
     background-image: url("/images/backgrounds/ribbon-2.svg");
     opacity: 1;
   }
-  47%,
-  52% {
+  40%,
+  42% {
     background-image: url("/images/backgrounds/ribbon-2.svg");
     opacity: 0;
   }
-  54%,
-  72% {
+  43%,
+  59% {
     background-image: url("/images/backgrounds/ribbon-3.svg");
     opacity: 1;
   }
-  74%,
+  60%,
+  62% {
+    background-image: url("/images/backgrounds/ribbon-3.svg");
+    opacity: 0;
+  }
+  63%,
   79% {
-    background-image: url("/images/backgrounds/ribbon-3.svg");
-    opacity: 0;
-  }
-  81%,
-  99% {
     background-image: url("/images/backgrounds/ribbon-4.svg");
     opacity: 1;
   }
-  101%,
-  106% {
+  80%,
+  82% {
     background-image: url("/images/backgrounds/ribbon-4.svg");
     opacity: 0;
   }
-  108%,
-  126% {
+  83%,
+  99% {
     background-image: url("/images/backgrounds/ribbon-5.svg");
     opacity: 1;
   }
-  128%,
-  133% {
+  100% {
     background-image: url("/images/backgrounds/ribbon-5.svg");
     opacity: 0;
   }
@@ -57,52 +56,51 @@
 /* 深色模式背景图动画 */
 @keyframes background-fade-rotation-dark {
   0%,
-  18% {
+  19% {
     background-image: url("/images/backgrounds/ribbon-dark-1.svg");
     opacity: 1;
   }
   20%,
-  25% {
+  22% {
     background-image: url("/images/backgrounds/ribbon-dark-1.svg");
     opacity: 0;
   }
-  27%,
-  45% {
+  23%,
+  39% {
     background-image: url("/images/backgrounds/ribbon-dark-2.svg");
     opacity: 1;
   }
-  47%,
-  52% {
+  40%,
+  42% {
     background-image: url("/images/backgrounds/ribbon-dark-2.svg");
     opacity: 0;
   }
-  54%,
-  72% {
+  43%,
+  59% {
     background-image: url("/images/backgrounds/ribbon-dark-3.svg");
     opacity: 1;
   }
-  74%,
+  60%,
+  62% {
+    background-image: url("/images/backgrounds/ribbon-dark-3.svg");
+    opacity: 0;
+  }
+  63%,
   79% {
-    background-image: url("/images/backgrounds/ribbon-dark-3.svg");
-    opacity: 0;
-  }
-  81%,
-  99% {
     background-image: url("/images/backgrounds/ribbon-dark-4.svg");
     opacity: 1;
   }
-  101%,
-  106% {
+  80%,
+  82% {
     background-image: url("/images/backgrounds/ribbon-dark-4.svg");
     opacity: 0;
   }
-  108%,
-  126% {
+  83%,
+  99% {
     background-image: url("/images/backgrounds/ribbon-dark-5.svg");
     opacity: 1;
   }
-  128%,
-  133% {
+  100% {
     background-image: url("/images/backgrounds/ribbon-dark-5.svg");
     opacity: 0;
   }

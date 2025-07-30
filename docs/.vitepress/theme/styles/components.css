@@ -105,8 +105,11 @@
 
 /* 侧边栏样式 */
 .VPSidebar {
-  background: var(--vp-c-bg-alt);
+  background-color: transparent !important;
   border-right: 1px solid var(--vp-c-divider);
+}
+.VPSidebar .curtain {
+  background-color: transparent !important;
 }
 
 /* 内容区域样式 */

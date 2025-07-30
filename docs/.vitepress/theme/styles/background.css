@@ -12,11 +12,34 @@ html {
 .VPContent {
   position: relative;
   background: none;
+  min-height: 100vh;
+}
+
+/* 确保背景图片在所有设备上都能正确显示 */
+@media (max-width: 768px) {
+  .VPContent::before {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .VPContent::before {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (min-width: 1201px) {
+  .VPContent::before {
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .VPContent::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -25,6 +48,7 @@ html {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   opacity: 0;
   animation: background-fade-rotation 40s infinite;
   z-index: -1;
@@ -33,7 +57,7 @@ html {
 /* 背景图蒙层效果 */
 .VPContent::after {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -47,6 +71,22 @@ html {
   pointer-events: none;
 }
 
+/* 确保背景图片在超宽屏幕上也能正确显示 */
+@media (min-aspect-ratio: 2/1) {
+  .VPContent::before {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* 确保背景图片在超窄屏幕上也能正确显示 */
+@media (max-aspect-ratio: 1/2) {
+  .VPContent::before {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 /* 深色模式背景图动画 */
 .dark .VPContent::before {
   animation: background-fade-rotation-dark 40s infinite;
@@ -56,4 +96,14 @@ html {
 .VPDocFooter {
   border-top: none !important;
   padding-top: 0 !important;
+}
+
+.VPDocFooter .edit-info {
+  display: none;
+}
+
+/* 修改首页底部栏样式 */
+.VPFooter {
+  background-color: transparent !important;
+  border-top-width: 2px !important;
 }

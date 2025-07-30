@@ -1,7 +1,7 @@
 {
   "name": "vlog-virginia-blog",
   "version": "1.0.0",
-  "description": "Virginia's Personal Blog powered by VitePress and Teek Theme",
+  "description": "Virginia's Personal Blog powered by VitePress and TS",
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "vitepress": "^1.0.0-rc.44",
-    "vitepress-theme-teek": "latest",
     "@types/node": "^20.11.5",
     "typescript": "^5.3.3"
   },

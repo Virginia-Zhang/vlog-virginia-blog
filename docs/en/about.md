@@ -10,6 +10,6 @@ Hi! I'm Virginia, a passionate full-stack developer. Welcome to my personal blog
 
 ## Contact
 
-- GitHub: [github.com/your-username](https://github.com/your-username)
-- Email: your-email@example.com
+- GitHub: [github.com/Virginia-Zhang](https://github.com/Virginia-Zhang)
+- Email: zhangsakurayi@qq.com
 - LinkedIn: [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)

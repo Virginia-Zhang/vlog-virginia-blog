@@ -62,8 +62,8 @@ features:
 
 如果你对文章内容有任何疑问或建议，欢迎通过以下方式联系我：
 
-- **GitHub**: [your-username](https://github.com/your-username)
-- **邮箱**: your-email@example.com
+- **GitHub**: [Virginia-Zhang](https://github.com/Virginia-Zhang)
+- **邮箱**: zhangsakurayi@qq.com
 - **微信**: your-wechat-id
 
 让我们一起在技术的道路上不断成长！

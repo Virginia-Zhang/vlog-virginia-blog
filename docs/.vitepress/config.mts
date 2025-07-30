@@ -266,20 +266,6 @@ export default defineConfig({
     outline: {
       label: "页面导航",
     },
-
-    // 评论配置（Giscus）
-    // giscus: {
-    //   repo: "your-username/vlog-virginia-blog",
-    //   repoId: "your-repo-id",
-    //   category: "Announcements",
-    //   categoryId: "your-category-id",
-    //   mapping: "pathname",
-    //   reactionsEnabled: "1",
-    //   emitMetadata: "0",
-    //   inputPosition: "bottom",
-    //   theme: "preferred_color_scheme",
-    //   lang: "zh-CN",
-    // },
   },
 
   // 站点配置
@@ -305,6 +291,9 @@ export default defineConfig({
         onload: "this.onload=null;this.rel='stylesheet'",
       },
     ],
+    // 预加载Giscus
+    ["link", { rel: "preconnect", href: "https://giscus.app" }],
+    ["link", { rel: "dns-prefetch", href: "https://giscus.app" }],
   ],
 
   // Markdown配置

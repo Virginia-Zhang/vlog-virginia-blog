@@ -120,7 +120,7 @@
 你可以通过以下方式申请友链：
 
 1. **GitHub Issue**: 在本博客的 GitHub 仓库提交 Issue
-2. **邮件申请**: 发送邮件至 your-email@example.com
+2. **邮件申请**: 发送邮件至 zhangsakurayi@qq.com
 3. **评论留言**: 在任意文章下方留言申请
 
 ### 申请格式

@@ -1,12 +1,12 @@
 # Vlog-Virginia's Blog
 
-基于 VitePress 和 Teek 主题的个人技术博客，支持中英日三种语言，集成 Giscus 评论功能。
+基于 VitePress 和 TypeScript 的个人技术博客，支持中英日三种语言，集成 Giscus 评论功能。设计灵感一部分来源于 Vitepress 主题 [Teek](https://github.com/teekcode/vitepress-theme-teek)，一部分来源于博客 [二丫讲梵](https://wiki.eryajf.net/)。
 
 ![Blog Preview](./docs/public/images/blog-preview.jpg)
 
 ## ✨ 特性
 
-- 🎨 **现代化设计** - 基于 VitePress 和 Teek 主题的精美界面
+- 🎨 **现代化设计** - 基于 VitePress 和 自定义设计样式 的精美界面
 - 🌍 **多语言支持** - 支持中文、英文、日文三种语言
 - 💬 **评论系统** - 集成 Giscus 评论功能
 - 📱 **响应式设计** - 完美适配桌面端和移动端
@@ -26,7 +26,7 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/your-username/vlog-virginia-blog.git
+git clone https://github.com/Virginia-Zhang/vlog-virginia-blog.git
 cd vlog-virginia-blog
 
 # 安装依赖
@@ -100,7 +100,7 @@ export default defineConfig({
   // 替换为你的 GitHub 仓库
   themeConfig: {
     socialLinks: [
-      { icon: "github", link: "https://github.com/your-username/your-repo" },
+      { icon: "github", link: "https://github.com/Virginia-Zhang/your-repo" },
     ],
   },
 });
@@ -112,7 +112,7 @@ export default defineConfig({
 
 ```typescript
 const giscusConfig = {
-  "data-repo": "your-username/your-repo", // 你的仓库
+  "data-repo": "Virginia-Zhang/your-repo", // 你的仓库
   "data-repo-id": "your-repo-id", // 仓库 ID
   "data-category": "Announcements", // 讨论分类
   "data-category-id": "your-category-id", // 分类 ID
@@ -330,12 +330,14 @@ npm run build -- --debug
 - [Teek Theme](https://github.com/teekcode/vitepress-theme-teek) - 博客主题
 - [Giscus](https://giscus.app/) - 评论系统
 - [Vue.js](https://vuejs.org/) - 渐进式 JavaScript 框架
+- [二丫讲梵](https://wiki.eryajf.net/) - 博客
 
 ## 📞 联系
 
 - 作者：Virginia
-- 邮箱：your-email@example.com
-- GitHub：[@your-username](https://github.com/your-username)
+- 邮箱：zhangsakurayi@qq.com
+- GitHub：[@Virginia-Zhang](https://github.com/Virginia-Zhang)
+- 也可在我的博客任意评论区处留言
 
 ---
 

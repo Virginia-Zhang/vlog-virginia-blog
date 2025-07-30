@@ -101,8 +101,8 @@ features:
 
 記事内容についてご質問やご提案がございましたら、以下の方法でお気軽にお連絡ください：
 
-- **GitHub**: [your-username](https://github.com/your-username)
-- **メール**: your-email@example.com
+- **GitHub**: [Virginia-Zhang](https://github.com/Virginia-Zhang)
+- **メール**: zhangsakurayi@qq.com
 - **WeChat**: your-wechat-id
 
 技術の道で一緒に成長しましょう！

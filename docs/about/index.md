@@ -105,8 +105,8 @@ description: 谢谢你愿意来了解我！共同成长，一起进步~
 
 如果你对我的文章有任何疑问或建议，或者想要进行技术交流，欢迎通过以下方式联系我：
 
-- **GitHub**: [github.com/your-username](https://github.com/your-username)
-- **邮箱**: your-email@example.com
+- **GitHub**: [github.com/Virginia-Zhang](https://github.com/Virginia-Zhang)
+- **邮箱**: zhangsakurayi@qq.com
 - **微信**: your-wechat-id
 - **LinkedIn**: [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
 

@@ -74,6 +74,14 @@
   .VPDoc .container .content {
     padding-top: 100px;
   }
+
+  .VPSidebar {
+    background-color: var(--vp-sidebar-bg-color) !important;
+  }
+
+  .VPSidebar .curtain {
+    background-color: var(--vp-c-bg-alt) !important;
+  }
 }
 
 /* 屏幕宽度小于860px时，显示右侧汉堡折叠菜单 */

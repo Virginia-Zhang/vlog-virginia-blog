@@ -101,8 +101,8 @@ This is Virginia's personal technical blog, recording my learning insights and p
 
 If you have any questions or suggestions about the article content, welcome to contact me through the following ways:
 
-- **GitHub**: [your-username](https://github.com/your-username)
-- **Email**: your-email@example.com
+- **GitHub**: [Virginia-Zhang](https://github.com/Virginia-Zhang)
+- **Email**: zhangsakurayi@qq.com
 - **WeChat**: your-wechat-id
 
 Let's grow together on the path of technology!

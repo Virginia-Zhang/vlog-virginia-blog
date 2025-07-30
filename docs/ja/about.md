@@ -10,6 +10,6 @@
 
 ## 連絡先
 
-- GitHub: [github.com/your-username](https://github.com/your-username)
-- メール: your-email@example.com
+- GitHub: [github.com/Virginia-Zhang](https://github.com/Virginia-Zhang)
+- メール: zhangsakurayi@qq.com
 - LinkedIn: [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)

@@ -15,28 +15,6 @@ html {
   min-height: 100vh;
 }
 
-/* 确保背景图片在所有设备上都能正确显示 */
-@media (max-width: 768px) {
-  .VPContent::before {
-    background-size: cover;
-    background-position: center;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1200px) {
-  .VPContent::before {
-    background-size: cover;
-    background-position: center;
-  }
-}
-
-@media (min-width: 1201px) {
-  .VPContent::before {
-    background-size: cover;
-    background-position: center;
-  }
-}
-
 .VPContent::before {
   content: "";
   position: fixed;
@@ -52,6 +30,26 @@ html {
   opacity: 0;
   animation: background-fade-rotation 40s infinite;
   z-index: -1;
+}
+
+/* 中小屏幕设备 - 使用宽度自适应且垂直方向上重复的背景图展示策略 */
+@media (max-width: 1200px) {
+  .VPContent::before {
+    background-size: 100% auto !important;
+    background-position: center !important;
+    background-repeat: repeat-y !important;
+    background-attachment: scroll !important;
+  }
+}
+
+/* 大屏幕设备 - 保持原有的cover效果 */
+@media (min-width: 1201px) {
+  .VPContent::before {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+  }
 }
 
 /* 背景图蒙层效果 */
@@ -72,18 +70,20 @@ html {
 }
 
 /* 确保背景图片在超宽屏幕上也能正确显示 */
-@media (min-aspect-ratio: 2/1) {
+@media (min-aspect-ratio: 2/1) and (min-width: 769px) {
   .VPContent::before {
-    background-size: cover;
-    background-position: center;
+    background-size: cover !important;
+    background-position: center !important;
   }
 }
 
 /* 确保背景图片在超窄屏幕上也能正确显示 */
-@media (max-aspect-ratio: 1/2) {
+@media (max-aspect-ratio: 1/2) and (max-width: 768px) {
   .VPContent::before {
-    background-size: cover;
-    background-position: center;
+    background-size: 100% auto !important;
+    background-position: center !important;
+    background-repeat: repeat-y !important;
+    background-attachment: scroll !important;
   }
 }
 

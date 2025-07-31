@@ -1,18 +1,13 @@
 <svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <radialGradient id="grad1" cx="30%" cy="30%" r="70%">
-      <stop offset="0%" style="stop-color:#5a4fa1;stop-opacity:0.3" />
-      <stop offset="50%" style="stop-color:#6a5fb7;stop-opacity:0.4" />
-      <stop offset="100%" style="stop-color:#4a3f8b;stop-opacity:0.2" />
-    </radialGradient>
     <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#3a2f7a;stop-opacity:0.25" />
       <stop offset="100%" style="stop-color:#2a1f6a;stop-opacity:0.35" />
     </linearGradient>
   </defs>
   
-  <!-- 背景渐变 -->
-  <rect width="1920" height="1080" fill="url(#grad1)"/>
+  <!-- 统一背景色 -->
+  <rect width="1920" height="1080" fill="#4a3f8b" opacity="0.15"/>
   
   <!-- 螺旋绸带1 -->
   <path d="M-300 300 Q100 200 500 300 T1300 300 L1700 400 Q1300 500 900 400 T100 400 L-100 300 Z" 

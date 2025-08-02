@@ -62,8 +62,8 @@ features:
 
 如果你对文章内容有任何疑问或建议，欢迎通过以下方式联系我：
 
-- **GitHub**: [Virginia-Zhang](https://github.com/Virginia-Zhang)
-- **邮箱**: zhangsakurayi@qq.com
-- **微信**: your-wechat-id
+- 🐙 **GitHub**: [Virginia-Zhang](https://github.com/Virginia-Zhang)
+- :email: **邮箱**: zhangsakurayi@qq.com
+- :speech_balloon: **微信**: abc5301235(请备注来意)
 
 让我们一起在技术的道路上不断成长！

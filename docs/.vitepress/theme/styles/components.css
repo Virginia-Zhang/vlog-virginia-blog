@@ -233,3 +233,128 @@ body {
 .aside-curtain {
   background: transparent !important;
 }
+
+/* 文档图片悬浮效果 */
+.doc-image {
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.doc-image:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== 通用卡片样式 ===== */
+
+/* 卡片容器 */
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* 基础卡片样式 */
+.base-card {
+  background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.base-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
+  border-radius: 0 2px 2px 0;
+}
+
+.base-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--vp-c-brand-1);
+}
+
+/* 卡片标题 */
+.card-title {
+  margin: 0 0 1rem 0 !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: var(--vp-c-text-1);
+}
+
+/* 卡片内容 */
+.card-content {
+  color: var(--vp-c-text-1);
+}
+
+.card-description {
+  margin: 0 0 0.75rem 0;
+  color: var(--vp-c-text-2);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* 卡片列表 */
+.card-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--vp-c-text-1);
+}
+
+.card-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.card-list strong {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .base-card {
+    padding: 1.25rem;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* 深色主题适配 */
+:root[class*="dark"] .base-card {
+  background: var(--vp-c-bg-soft);
+  border-color: var(--vp-c-border);
+}
+
+:root[class*="dark"] .base-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+:root[class*="dark"] .card-title {
+  color: var(--vp-c-text-1) !important;
+}
+
+:root[class*="dark"] .card-content,
+:root[class*="dark"] .card-list {
+  color: var(--vp-c-text-1);
+}
+
+:root[class*="dark"] .card-description {
+  color: var(--vp-c-text-2);
+}
+
+:root[class*="dark"] .card-list strong {
+  color: var(--vp-c-brand-1);
+}

@@ -1,38 +1,35 @@
 ---
-title: 生活分享
-description: 工作之余的生活感悟，旅行见闻，读书笔记
+title: 浮生若梦
+description: 工作之余的生活分享，影音推荐等等
 ---
 
-# 生活分享
+# 浮生若梦
 
-欢迎来到生活分享专区！这里记录工作之余的生活感悟，旅行见闻，读书笔记，以及对美好生活的思考。
+浮生若梦，为欢几何？这里记录工作之余的生活分享，影视推荐（我本人是个电影迷），可能还会穿插一些音乐分享。
+
+还有，我家的可爱猫猫 🐈 那是一定少不了的~
+
+<div style="display: flex; gap: 20px;">
+  <img src="/images/life/My cat.png" alt="蓝宝贝" width="300" class="doc-image">
+  <img src="/images/life/xiaoju_anime.png" alt="橘宝贝" width="400" class="doc-image">
+</div>
 
 ## 📚 文章分类
 
-### 生活感悟
+### 生活分享
 
-- 工作与生活平衡
-- 个人成长思考
-- 时间管理技巧
-- 生活态度分享
+> 我走得很慢，但决不放弃。
 
-### 旅行记录
+<img src="/images/life/run by the sea.jpeg" alt="我走得很慢，但决不放弃。" class="doc-image">
 
-- 旅行见闻分享
-- 摄影技巧心得
-- 美食探索记录
-- 文化体验感悟
+### 影音推荐
 
-### 读书笔记
+> 光影与音符，是这世间最优雅的表达。
 
-- 技术书籍推荐
-- 读书心得分享
-- 知识整理总结
-- 学习笔记记录
+<img src="/images/life/film and music.jpeg" alt="光影与音符" class="doc-image">
 
 ### 其他分享
 
-- 兴趣爱好分享
-- 生活小技巧
-- 美食制作记录
-- 生活美学思考
+> 想到什么，就记录点什么。
+
+<img src="/images/life/other.jpeg" alt="其他" class="doc-image">

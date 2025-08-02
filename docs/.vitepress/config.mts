@@ -54,7 +54,7 @@ const nav = [
       { text: "其他", link: "/languages/others/" },
     ],
   },
-  { text: "生活切片", link: "/life/" },
+  { text: "浮生若梦", link: "/life/" },
   { text: "关于", link: "/about/" },
   { text: "友情链接", link: "/friends/" },
 ];
@@ -120,11 +120,10 @@ const sidebar = {
   ],
   "/life/": [
     {
-      text: "生活分享",
+      text: "浮生若梦",
       items: [
-        { text: "生活感悟", link: "/life/thoughts/" },
-        { text: "旅行记录", link: "/life/travel/" },
-        { text: "读书笔记", link: "/life/books/" },
+        { text: "生活分享", link: "/life/records/" },
+        { text: "影音推荐", link: "/life/recommendations/" },
         { text: "其他分享", link: "/life/others/" },
       ],
     },

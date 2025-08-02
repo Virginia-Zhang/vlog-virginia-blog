@@ -1,0 +1,390 @@
+/* about 页面 CSS 样式 */
+
+/* 工作经历卡片样式 */
+.work-experience-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.work-title {
+  margin: 0 !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: var(--vp-c-text-1);
+}
+
+.work-period {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid var(--vp-c-brand-1);
+}
+
+.work-content {
+  margin-left: 0.5rem;
+}
+
+.work-description {
+  margin: 0 0 0.75rem 0;
+  color: var(--vp-c-text-2);
+  font-weight: 500;
+}
+
+.work-details {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--vp-c-text-1);
+}
+
+.work-details li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* 项目经验卡片样式 */
+.project-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+
+.project-card {
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--vp-c-brand-1),
+    var(--vp-c-brand-2),
+    var(--vp-c-brand-1)
+  );
+  background-size: 200% 100%;
+  animation: gradient-shift 3s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  border-color: var(--vp-c-brand-1);
+}
+
+.project-header {
+  margin-bottom: 1.5rem;
+}
+
+.project-title {
+  margin: 0 0 1.3rem 0 !important;
+  font-size: 1.4rem !important;
+  font-weight: 600 !important;
+  color: var(--vp-c-text-1);
+  line-height: 1.3 !important;
+}
+
+.project-tech {
+  background: linear-gradient(
+    135deg,
+    var(--vp-c-brand-soft),
+    rgba(139, 126, 216, 0.1)
+  );
+  color: var(--vp-c-brand-1);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--vp-c-brand-1);
+  display: inline-block;
+}
+
+.project-content {
+  color: var(--vp-c-text-1);
+}
+
+.project-description {
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+  color: var(--vp-c-text-2);
+}
+
+.project-modules {
+  margin: 0 0 1.5rem 0;
+  padding-left: 1.25rem;
+  color: var(--vp-c-text-1);
+}
+
+.project-modules li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.project-highlights {
+  background: #faf5ff;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-top: 1rem;
+}
+
+.project-highlights h5 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--vp-c-brand-1);
+}
+
+.project-highlights ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--vp-c-text-1);
+}
+
+.project-highlights li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* 技术栈卡片样式 */
+.tech-stack-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.tech-title {
+  margin: 0 0 1rem 0 !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: var(--vp-c-text-1);
+}
+
+.tech-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--vp-c-text-1);
+}
+
+.tech-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.tech-list strong {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+/* 为什么写博客卡片样式 */
+.blog-reason-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.blog-reason-title {
+  margin: 0 0 1rem 0 !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: var(--vp-c-text-1);
+}
+
+.blog-reason-content {
+  margin: 0;
+  color: var(--vp-c-text-2);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* 兴趣爱好卡片样式 */
+.hobby-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.hobby-title {
+  margin: 0 0 1rem 0 !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: var(--vp-c-text-1);
+}
+
+.hobby-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--vp-c-text-1);
+}
+
+.hobby-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.hobby-list strong {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+/* 联系方式卡片样式 */
+.contact-intro {
+  margin: 0 0 1rem 0;
+  color: var(--vp-c-text-2);
+  font-weight: 500;
+}
+
+.contact-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--vp-c-text-1);
+}
+
+.contact-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.contact-list a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-list a:hover {
+  color: var(--vp-c-brand-2);
+}
+
+/* 未来计划卡片样式 */
+.future-plan-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.future-plan-title {
+  margin: 0 0 1rem 0 !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: var(--vp-c-text-1);
+}
+
+.future-plan-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--vp-c-text-1);
+}
+
+.future-plan-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .work-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-card {
+    padding: 1.25rem;
+  }
+
+  .project-title,
+  .tech-title,
+  .blog-reason-title,
+  .hobby-title,
+  .future-plan-title {
+    font-size: 1.25rem;
+  }
+
+  .project-tech {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* 深色主题适配 */
+:root[class*="dark"] .project-highlights {
+  background: var(--vp-c-bg);
+  border-color: var(--vp-c-border);
+}
+
+/* 深色主题下技术栈文字颜色优化 */
+:root[class*="dark"] .tech-title {
+  color: var(--vp-c-text-1) !important;
+}
+
+:root[class*="dark"] .tech-list {
+  color: var(--vp-c-text-1);
+}
+
+:root[class*="dark"] .tech-list strong {
+  color: var(--vp-c-brand-1);
+}
+
+/* 深色主题下其他卡片文字颜色优化 */
+:root[class*="dark"] .work-title,
+:root[class*="dark"] .project-title,
+:root[class*="dark"] .blog-reason-title,
+:root[class*="dark"] .hobby-title,
+:root[class*="dark"] .future-plan-title {
+  color: var(--vp-c-text-1) !important;
+}
+
+:root[class*="dark"] .work-details,
+:root[class*="dark"] .project-content,
+:root[class*="dark"] .blog-reason-content,
+:root[class*="dark"] .hobby-list,
+:root[class*="dark"] .contact-list,
+:root[class*="dark"] .future-plan-list {
+  color: var(--vp-c-text-1);
+}
+
+:root[class*="dark"] .work-description,
+:root[class*="dark"] .project-description,
+:root[class*="dark"] .contact-intro {
+  color: var(--vp-c-text-2);
+}
+
+:root[class*="dark"] .hobby-list strong,
+:root[class*="dark"] .contact-list strong,
+:root[class*="dark"] .work-details strong,
+:root[class*="dark"] .project-modules strong,
+:root[class*="dark"] .project-highlights strong {
+  color: var(--vp-c-brand-1);
+}

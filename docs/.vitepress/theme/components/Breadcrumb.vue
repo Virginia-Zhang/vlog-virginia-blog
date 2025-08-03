@@ -36,7 +36,7 @@
             >
               <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
             </svg>
-            {{ item.text }}
+            <span class="breadcrumb-text">{{ item.text }}</span>
           </span>
         </template>
         <template v-else>
@@ -184,6 +184,15 @@ function getBreadcrumbText(segment, fullPath) {
   background-color: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-divider);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  max-width: 280px;
+}
+
+.breadcrumb-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  min-width: 0;
 }
 
 .breadcrumb-icon {
@@ -203,6 +212,18 @@ function getBreadcrumbText(segment, fullPath) {
 }
 
 /* 响应式设计 */
+@media (max-width: 1024px) {
+  .breadcrumb-current {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-current {
+    max-width: 160px;
+  }
+}
+
 @media (max-width: 640px) {
   .breadcrumb {
     margin: 1rem 0 0.5rem 0;
@@ -219,6 +240,10 @@ function getBreadcrumbText(segment, fullPath) {
     padding: 0.125rem 0.375rem;
   }
 
+  .breadcrumb-current {
+    max-width: 120px;
+  }
+
   .breadcrumb-icon {
     width: 0.875rem;
     height: 0.875rem;
@@ -227,6 +252,58 @@ function getBreadcrumbText(segment, fullPath) {
 
   .breadcrumb-separator {
     margin: 0 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumb-current {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 404px) {
+  .breadcrumb {
+    margin: 0.75rem 0 0.5rem 0;
+    padding: 0.5rem 0;
+  }
+
+  .breadcrumb-list {
+    font-size: 0.75rem;
+    gap: 0.1rem;
+  }
+
+  .breadcrumb-link,
+  .breadcrumb-current {
+    padding: 0.1rem 0.25rem;
+  }
+
+  .breadcrumb-current {
+    max-width: 90px;
+  }
+
+  .breadcrumb-icon {
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-right: 0.2rem;
+  }
+
+  .breadcrumb-separator {
+    margin: 0 0.3rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .breadcrumb-current {
+    max-width: 70px;
+  }
+
+  .breadcrumb-list {
+    font-size: 0.7rem;
+  }
+
+  .breadcrumb-separator {
+    margin: 0 0.25rem;
   }
 }
 

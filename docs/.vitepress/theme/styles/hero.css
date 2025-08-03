@@ -58,19 +58,19 @@
 }
 
 .VPHero .text {
-  color: #d6d9db;
+  color: #e0e0e0;
   font-size: 3rem;
   line-height: 1.4;
   font-family: "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, sans-serif;
   font-weight: 400;
   letter-spacing: 0.3px;
-  text-shadow: 3px 3px 20px rgb(216 215 215 / 80%);
+  text-shadow: 1px 1px 10px rgba(140, 140, 140, 0.3);
   margin-bottom: 15px !important;
 }
 
 .VPHero .tagline {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 1.2rem;
   line-height: 1.6;
   font-family: "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI",

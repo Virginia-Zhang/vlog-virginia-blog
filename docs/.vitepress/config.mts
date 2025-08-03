@@ -54,7 +54,14 @@ const nav = [
       { text: "其他", link: "/languages/others/" },
     ],
   },
-  { text: "浮生若梦", link: "/life/" },
+  {
+    text: "浮生若梦",
+    items: [
+      { text: "生活分享", link: "/life/records/" },
+      { text: "影音推荐", link: "/life/recommendations/" },
+      { text: "其他分享", link: "/life/others/" },
+    ],
+  },
   { text: "关于", link: "/about/" },
   { text: "友情链接", link: "/friends/" },
 ];
@@ -144,7 +151,7 @@ const sidebar = {
 
 export default defineConfig({
   title: "Vlog-Virginia's Blog",
-  description: "Virginia's Personal Blog - 分享技术、生活与思考",
+  description: "全栈开发技术分享、外语指北与生活记录",
 
   // 多语言配置
   locales: {
@@ -152,14 +159,14 @@ export default defineConfig({
       label: "简体中文",
       lang: "zh-CN",
       title: "Vlog-Virginia's Blog",
-      description: "Virginia的个人博客 - 分享技术、生活与思考",
+      description: "全栈开发技术分享、外语指北与生活记录",
     },
     en: {
       label: "English",
       lang: "en",
       title: "Vlog-Virginia's Blog",
       description:
-        "Virginia's Personal Blog - Sharing technology, life and thoughts",
+        "Full-stack development technology sharing, foreign language guidance, and life records",
       themeConfig: {
         nav: [
           { text: "Home", link: "/en/" },
@@ -206,7 +213,7 @@ export default defineConfig({
     socialLinks: [
       {
         icon: "github",
-        link: "https://github.com/your-username/vlog-virginia-blog",
+        link: "https://github.com/Virginia-Zhang/vlog-virginia-blog",
       },
     ],
 
@@ -269,7 +276,7 @@ export default defineConfig({
 
   // 站点配置
   head: [
-    ["link", { rel: "icon", href: "/favicon.ico" }],
+    ["link", { rel: "icon", href: "/vlog_favicon.ico" }],
     ["meta", { name: "theme-color", content: "#646cff" }],
     ["meta", { name: "og:type", content: "website" }],
     ["meta", { name: "og:locale", content: "zh-CN" }],

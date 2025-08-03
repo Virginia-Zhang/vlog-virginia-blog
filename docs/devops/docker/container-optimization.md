@@ -5,6 +5,7 @@ author: Virginia
 category: devops
 tags: [Docker, 性能优化, 容器化]
 description: 分享在生产环境中优化 Docker 容器性能的实用技巧和最佳实践
+readTime: 10 分钟阅读
 ---
 
 # Docker 容器性能优化实践

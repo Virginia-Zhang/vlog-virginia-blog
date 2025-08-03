@@ -20,7 +20,12 @@
             </div>
             <p class="excerpt">{{ post.excerpt }}</p>
             <div class="tags">
-              <span v-for="tag in post.tags" :key="tag" class="tag">
+              <span
+                v-for="tag in post.tags"
+                :key="tag"
+                class="tag"
+                @click="goToTag(tag)"
+              >
                 {{ tag }}
               </span>
             </div>
@@ -75,6 +80,7 @@
               :key="tag.name"
               class="hot-tag"
               :class="category"
+              @click="goToTag(tag.name)"
             >
               {{ tag.name }}
             </span>
@@ -108,6 +114,54 @@ const changePage = (page: number) => {
     currentPage.value = page;
   }
 };
+
+// 跳转到站内搜索
+const goToTag = (tagName: string) => {
+  if (typeof window !== "undefined") {
+    // 触发VitePress搜索功能
+    // 首先尝试触发搜索弹窗
+    const searchButton = document.querySelector(
+      '.DocSearch-Button, .VPNavBarSearchButton, [aria-label="Search"]'
+    ) as HTMLElement;
+    if (searchButton) {
+      // 点击搜索按钮打开搜索
+      searchButton.click();
+
+      // 延迟填入搜索词
+      setTimeout(() => {
+        const searchInput = document.querySelector(
+          '.DocSearch-Input, input[type="search"]'
+        ) as HTMLInputElement;
+        if (searchInput) {
+          searchInput.value = tagName;
+          searchInput.focus();
+          // 触发输入事件
+          const event = new Event("input", { bubbles: true });
+          searchInput.dispatchEvent(event);
+        }
+      }, 100);
+    } else {
+      // 如果找不到搜索按钮，使用键盘快捷键
+      const event = new KeyboardEvent("keydown", {
+        key: "k",
+        ctrlKey: true,
+        bubbles: true,
+      });
+      document.dispatchEvent(event);
+
+      // 延迟填入搜索词
+      setTimeout(() => {
+        const searchInput = document.querySelector(
+          '.DocSearch-Input, input[type="search"]'
+        ) as HTMLInputElement;
+        if (searchInput) {
+          searchInput.value = tagName;
+          searchInput.focus();
+        }
+      }, 200);
+    }
+  }
+};
 </script>
 
 <style scoped>
@@ -125,7 +179,7 @@ const changePage = (page: number) => {
 
 .recent-posts-section,
 .hot-tags-section {
-  background: var(--vp-c-bg-soft);
+  background: rgba(139, 126, 216, 0.05);
   border: 1px solid var(--vp-c-border);
   border-radius: 12px;
   padding: 1.5rem;
@@ -148,7 +202,7 @@ const changePage = (page: number) => {
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1rem;
-  background: var(--vp-c-bg);
+  background: rgba(226, 232, 240, 0.4);
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -367,6 +421,18 @@ const changePage = (page: number) => {
   color: white;
 }
 
+/* 项目杂谈标签 - 青色系 */
+.hot-tag.projects {
+  background: rgba(6, 182, 212, 0.1);
+  color: #06b6d4;
+  border-color: rgba(6, 182, 212, 0.2);
+}
+
+.hot-tag.projects:hover {
+  background: #06b6d4;
+  color: white;
+}
+
 /* 动画效果 */
 .fade-in-up {
   animation: fadeInUp 0.6s ease-out;
@@ -427,10 +493,20 @@ const changePage = (page: number) => {
   .page-numbers {
     order: -1;
   }
+
+  .vp-doc h2 {
+    border-top: none;
+    padding-top: 0;
+  }
 }
 
-.vp-doc h2 {
-  border-top: none;
-  padding-top: 0;
+/* 深色模式下的背景色覆盖 */
+:root[class*="dark"] .recent-posts-section,
+:root[class*="dark"] .hot-tags-section {
+  background: rgba(139, 126, 216, 0.1);
+}
+
+:root[class*="dark"] .recent-posts .blog-card {
+  background: rgba(71, 85, 105, 0.3);
 }
 </style>

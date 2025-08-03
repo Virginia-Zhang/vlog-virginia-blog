@@ -2,7 +2,7 @@
 
 基于 VitePress 和 TypeScript 的个人技术博客，支持中英日三种语言，集成 Giscus 评论功能。设计灵感一部分来源于 Vitepress 主题 [Teek](https://github.com/teekcode/vitepress-theme-teek)，一部分来源于博客 [二丫讲梵](https://wiki.eryajf.net/)。
 
-![Blog Preview](./docs/public/images/blog-preview.jpg)
+<!-- ![Blog Preview](./docs/public/images/blog-preview.jpg) -->
 
 ## ✨ 特性
 

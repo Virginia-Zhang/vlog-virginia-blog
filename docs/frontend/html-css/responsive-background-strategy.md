@@ -23,8 +23,7 @@ description: 深入分析博客项目中背景图在不同屏幕尺寸下的响�
 
 对于大屏幕设备（1201px 以上），我们采用`background-size: cover`策略，确保背景图能够完全覆盖整个视口：
 
-<!-- 此处插入图片：/images/frontend/html-css/bg1.png -->
-<img src="/images/frontend/css/bg1.png" alt="大屏幕设备 - 保持原有的cover效果" />
+<img src="/images/frontend/css/bg1.webp" alt="大屏幕设备 - 保持原有的cover效果" class="doc-image" />
 
 ```css
 /* 大屏幕设备 - 保持原有的cover效果 */
@@ -48,8 +47,7 @@ description: 深入分析博客项目中背景图在不同屏幕尺寸下的响�
 
 对于中小屏幕设备（1200px 以下），我们切换到更实用的显示策略：
 
-<!-- 此处插入图片：/images/frontend/css/bg2.png -->
-<img src="/images/frontend/css/bg2.png" alt="中小屏幕设备 - 使用宽度自适应且垂直方向上重复的背景图展示策略" width="500px" />
+<img src="/images/frontend/css/bg2.webp" alt="中小屏幕设备 - 使用宽度自适应且垂直方向上重复的背景图展示策略" width="500px" class="doc-image"/>
 
 ```css
 /* 中小屏幕设备 - 使用宽度自适应且垂直方向上重复的背景图展示策略 */
@@ -73,8 +71,7 @@ description: 深入分析博客项目中背景图在不同屏幕尺寸下的响�
 
 针对超宽屏幕设备，我们特别优化了显示效果：
 
-<!-- 此处插入图片：/images/frontend/css/bg3.png -->
-<img src="/images/frontend/css/bg3.png" alt="超宽屏幕设备 - 使用宽度自适应且垂直方向上重复的背景图展示策略" />
+<img src="/images/frontend/css/bg3.webp" alt="超宽屏幕设备 - 使用宽度自适应且垂直方向上重复的背景图展示策略" class="doc-image"/>
 
 ```css
 /* 确保背景图片在超宽屏幕上也能正确显示 */
@@ -90,8 +87,7 @@ description: 深入分析博客项目中背景图在不同屏幕尺寸下的响�
 
 对于超窄屏幕设备（如手机竖屏），我们采用特殊的适配策略：
 
-<!-- 此处插入图片：/images/frontend/css/bg4.png -->
-<img src="/images/frontend/css/bg4.png" alt="超窄屏幕设备 - 使用宽度自适应且垂直方向上重复的背景图展示策略" width="500px" />
+<img src="/images/frontend/css/bg4.webp" alt="超窄屏幕设备 - 使用宽度自适应且垂直方向上重复的背景图展示策略" width="500px" class="doc-image"  />
 
 ```css
 /* 确保背景图片在超窄屏幕上也能正确显示 */

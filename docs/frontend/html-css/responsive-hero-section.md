@@ -26,8 +26,7 @@ Hero 区域是网站的第一印象，承载着品牌展示和用户引导的重
 
 对于大屏幕设备（961px - 1200px），我们采用宽屏布局，充分利用屏幕空间：
 
-<!-- 此处插入 hero_1024.png -->
-<img src="/images/frontend/css/hero_1024.png" alt="中等屏幕设备 - 平衡布局" width="500" />
+<img src="/images/frontend/css/hero_1024.webp" alt="中等屏幕设备 - 平衡布局" width="500" />
 
 ```css
 /* 大屏幕断点 (1200px以下) */
@@ -62,8 +61,7 @@ Hero 区域是网站的第一印象，承载着品牌展示和用户引导的重
 
 对于中等屏幕设备（960px 以下），我们开始调整布局比例：
 
-<!-- 插入图片 hero_820.png -->
-<img src="/images/frontend/css/hero_820.png" alt="中等屏幕设备 - 平衡布局" width="500" />
+<img src="/images/frontend/css/hero_820.webp" alt="中等屏幕设备 - 平衡布局" width="500" />
 
 ```css
 /* 中等屏幕断点 (960px以下) */
@@ -204,8 +202,7 @@ Hero 区域是网站的第一印象，承载着品牌展示和用户引导的重
 
 对于超小屏幕设备（480px 以下），进一步优化显示效果：
 
-<!-- 插入图片 hero_414.png -->
-<img src="/images/frontend/css/hero_414.png" alt="超小屏幕优化" width="500" />
+<img src="/images/frontend/css/hero_414.webp" alt="超小屏幕优化" width="500" />
 
 ```css
 /* 超小屏幕断点 (480px以下) */

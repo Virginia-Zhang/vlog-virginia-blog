@@ -14,8 +14,7 @@ readTime: 10 分钟阅读
 
 我是个流浪猫，流浪在街头巷尾，过惯了“风餐露宿”的日子。直到那一天，我遇到了我的主人——她看起来似乎很喜欢我，而且……我也蛮中意她的。她温柔地伸出手，抚摸我的头，我感受到了被眷顾的温度，于是我就决定：跟她回家。从此，我成了她家的猫，从浪迹天涯到坐拥温暖窝。
 
-<!-- 插入/images/life/records/mimi1.jpg -->
-<img src="/images/life/records/mimi1.jpg" alt="我是一只猫" class="doc-image">
+<img src="/images/life/records/mimi1.webp" alt="我是一只猫" class="doc-image">
 
 ## 我对猫粮有品味
 
@@ -24,36 +23,31 @@ readTime: 10 分钟阅读
 > “这也太差劲了吧？”
 > 我只吃那种营养均衡、口感上乘的猫粮，因为——我可是有品味的！😼
 
-<!-- 插入/images/life/records/mimi2.jpg -->
-<img src="/images/life/records/mimi2.jpg" alt="我是一只猫" class="doc-image">
+<img src="/images/life/records/mimi2.webp" alt="我是一只猫" class="doc-image">
 
 ## 关于撸身子与撸脸
 
 我的身材嘛……肉感十足，圆润得让主人特别着迷。她经常忍不住来撸我的肚子和背——虽然我不是特别喜欢（毕竟那是隐私地带嘛），但她只要撸我的**头、下巴和脸**，那我就**呼噜呼噜**不停——舒服得不得了，简直酥化！
 
-<!-- 插入/images/life/records/mimi3.jpg -->
-<img src="/images/life/records/mimi3.jpg" alt="我是一只猫" class="doc-image">
+<img src="/images/life/records/mimi3.webp" alt="我是一只猫" class="doc-image">
 
 ## 眼病与滴眼药水的小戏码
 
 不瞒你说，我有点猫鼻支这种慢性眼病，每天都要滴眼药水。主人总是温柔地帮我清洁眼睛、滴药水，我虽然嘴上不说，但内心里是非常感激的。毕竟，「滴眼药水」这事，每天都得做，可她从不抱怨，我知道她对我有多好。
 
-<!-- 插入/images/life/records/mimi4.jpg -->
-<img src="/images/life/records/mimi4.jpg" alt="我是一只猫" class="doc-image">
+<img src="/images/life/records/mimi4.webp" alt="我是一只猫" class="doc-image">
 
 ## 我有点金贵，不耐热也不耐寒
 
 我有点娇气。夏天一热，我就不停地流口水；冬天一吹冷风，我就打喷嚏个没完。主人看我这样，就一直让我呆在家里的恒温环境，夏天有凉爽的空调，冬天有热乎乎的暖气，舒服极了 💆‍……我真的是太感谢她啦！
 
-<!-- 插入/images/life/records/mimi5.jpg -->
-<img src="/images/life/records/mimi5.jpg" alt="我是一只猫" class="doc-image">
+<img src="/images/life/records/mimi5.webp" alt="我是一只猫" class="doc-image">
 
 ## 最爽的事？当然是看她铲屎了！
 
 说实话，我觉得最爽的事情就是：**看主人给我铲屎**。那个铲屎的过程简直让我心里默默乐滋滋，哈哈哈！
 
-<!-- 插入/images/life/records/mimi6.jpg -->
-<img src="/images/life/records/chanshi.png" alt="我是一只猫" class="doc-image">
+<img src="/images/life/records/chanshi.webp" alt="我是一只猫" class="doc-image">
 
 ---
 

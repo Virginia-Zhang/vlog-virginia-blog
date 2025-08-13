@@ -2,7 +2,10 @@
 
 基于 VitePress 和 TypeScript 的个人技术博客，支持中英日三种语言，集成 Giscus 评论功能。设计灵感一部分来源于 Vitepress 主题 [Teek](https://github.com/teekcode/vitepress-theme-teek)，一部分来源于博客 [二丫讲梵](https://wiki.eryajf.net/)。
 
-<!-- ![Blog Preview](./docs/public/images/blog-preview.jpg) -->
+博客预览图
+
+<!-- 插入 /public/images/vlog_zhcn.gif -->
+<img src="./public/images/vlog_zhcn.gif" alt="Vlog-Virginia's Blog" width="100%">
 
 ## ✨ 特性
 
@@ -100,7 +103,7 @@ export default defineConfig({
   // 替换为你的 GitHub 仓库
   themeConfig: {
     socialLinks: [
-      { icon: "github", link: "https://github.com/Virginia-Zhang/your-repo" },
+      { icon: "github", link: "https://github.com/your-username/your-repo" },
     ],
   },
 });
@@ -112,7 +115,7 @@ export default defineConfig({
 
 ```typescript
 const giscusConfig = {
-  "data-repo": "Virginia-Zhang/your-repo", // 你的仓库
+  "data-repo": "your-username/your-repo", // 你的仓库
   "data-repo-id": "your-repo-id", // 仓库 ID
   "data-category": "Announcements", // 讨论分类
   "data-category-id": "your-category-id", // 分类 ID
@@ -158,7 +161,7 @@ locales: {
 ---
 title: 文章标题
 date: 2024-01-15
-author: Virginia
+author: your-name
 category: frontend
 tags: [Vue3, JavaScript]
 description: 文章描述
@@ -334,7 +337,7 @@ npm run build -- --debug
 
 ## 📞 联系
 
-- 作者：Virginia
+- 作者：Virginia Zhang
 - 邮箱：zhangsakurayi@qq.com
 - GitHub：[@Virginia-Zhang](https://github.com/Virginia-Zhang)
 - 也可在我的博客任意评论区处留言

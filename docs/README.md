@@ -2,8 +2,10 @@
 
 基于 VitePress 和 TypeScript 的个人技术博客，支持中英日三种语言，集成 Giscus 评论功能。设计灵感一部分来源于 Vitepress 主题 [Teek](https://github.com/teekcode/vitepress-theme-teek)，一部分来源于博客 [二丫讲梵](https://wiki.eryajf.net/)。
 
+博客预览图
+
 <!-- 插入 /public/images/vlog_zhcn.gif -->
-<img src="/public/images/vlog_zhcn.gif" alt="Vlog-Virginia's Blog" width="100%">
+<img src="./public/images/vlog_zhcn.gif" alt="Vlog-Virginia's Blog" width="100%">
 
 ## ✨ 特性
 

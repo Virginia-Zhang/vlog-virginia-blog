@@ -29,7 +29,7 @@ description: 探索现代前端技术的无限可能
     <p class="card-description">
       ES6+ 新特性深度解析、异步编程：Promise、async/await、JavaScript 相关常见面试题解析等核心知识点。
     </p>
-    <p><strong>标签：</strong> <span class="tag">JavaScript</span> <span class="tag">ES6+</span> <span class="tag">异步编程</span> <span class="tag">面试题</span></p>
+    <p><strong>标签：</strong> <span class="tag">JavaScript</span> <span class="tag">ES6+</span><span class="tag">面试题</span></p>
   </div>
 </div>
 
@@ -39,7 +39,7 @@ description: 探索现代前端技术的无限可能
   </h3>
   <div class="card-content">
     <p class="card-description">
-      Vue 3 Composition API 完全指南、Vue Router、Vuex / Pinia 状态管理、Vue 组件设计与开发、Vue 项目工程化实践。
+      Vue、Vue Router、Vuex / Pinia 状态管理、Vue 组件设计与开发、Vue 项目工程化实践。
     </p>
     <p><strong>标签：</strong> <span class="tag">Vue</span> <span class="tag">Vue3</span> <span class="tag">Composition API</span> <span class="tag">状态管理</span></p>
   </div>

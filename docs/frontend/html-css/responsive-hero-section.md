@@ -13,8 +13,8 @@ description: 深入分析博客项目中Hero区域的响应式设计策略，包
 
 Hero 区域是网站的第一印象，承载着品牌展示和用户引导的重要使命。在响应式设计中，Hero 区域需要根据不同设备的屏幕尺寸和用户习惯进行精细调整。本文将深入分析我博客项目中 Hero 区域的响应式设计策略，展示如何实现文字大小、图片尺寸和整体布局的完美适配。
 
-<!-- 插入/images/frontend/css/hero_section.png -->
-<img src="/images/frontend/css/hero_section.png" alt="Hero 区域设计" />
+<!-- 插入/images/frontend/css/hero_section.webp -->
+<img src="/images/frontend/css/hero_section.webp" alt="Hero 区域设计" />
 
 ## 项目背景
 

@@ -160,6 +160,20 @@ export default defineConfig({
       lang: "zh-CN",
       title: "Vlog-Virginia's Blog",
       description: "全栈开发技术分享、外语指北与生活记录",
+      // 添加 og:image 和 og:locale
+      head: [
+        ["meta", { property: "og:locale", content: "zh_CN" }],
+        ["meta", { property: "og:locale:alternate", content: "en_US" }],
+        ["meta", { property: "og:locale:alternate", content: "ja_JP" }],
+        [
+          "meta",
+          {
+            property: "og:image",
+            content:
+              "https://vlog-virginia-blog.pages.dev/images/og-image-zh-CN.png",
+          },
+        ],
+      ],
     },
     en: {
       label: "English",
@@ -167,6 +181,12 @@ export default defineConfig({
       title: "Vlog-Virginia's Blog",
       description:
         "Full-stack development technology sharing, foreign language guidance, and life records",
+      head: [
+        ["meta", { property: "og:locale", content: "en_US" }],
+        ["meta", { property: "og:locale:alternate", content: "zh_CN" }],
+        ["meta", { property: "og:locale:alternate", content: "ja_JP" }],
+        // ["meta", { property: "og:image", content: "https://.../og-image-en.png" }],
+      ],
       themeConfig: {
         nav: [
           { text: "Home", link: "/en/" },
@@ -186,6 +206,12 @@ export default defineConfig({
       lang: "ja",
       title: "Vlog-Virginia's Blog",
       description: "Virginiaの個人ブログ - 技術、生活、思考をシェア",
+      head: [
+        ["meta", { property: "og:locale", content: "ja_JP" }],
+        ["meta", { property: "og:locale:alternate", content: "zh_CN" }],
+        ["meta", { property: "og:locale:alternate", content: "en_US" }],
+        // ["meta", { property: "og:image", content: "https://.../og-image-ja.png" }],
+      ],
       themeConfig: {
         nav: [
           { text: "ホーム", link: "/ja/" },
@@ -220,7 +246,7 @@ export default defineConfig({
     // 页脚配置
     footer: {
       message: "Released under the MIT License.",
-      copyright: `Copyright © 2024-${new Date().getFullYear()} Virginia`,
+      copyright: `Copyright © ${new Date().getFullYear()} Virginia`,
     },
 
     // 搜索配置
@@ -278,10 +304,13 @@ export default defineConfig({
   head: [
     ["link", { rel: "icon", href: "/vlog_favicon.ico" }],
     ["meta", { name: "theme-color", content: "#646cff" }],
+    [
+      "meta",
+      { name: "description", content: "全栈开发技术分享、外语指北与生活记录" },
+    ],
+    //
     ["meta", { name: "og:type", content: "website" }],
-    ["meta", { name: "og:locale", content: "zh-CN" }],
-    ["meta", { name: "og:site_name", content: "Virginia's Blog" }],
-    ["meta", { name: "og:image", content: "/images/og-image.png" }],
+    ["meta", { name: "og:site_name", content: "Vlog - Virginia's Blog" }],
     // 预加载字体
     ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
     [

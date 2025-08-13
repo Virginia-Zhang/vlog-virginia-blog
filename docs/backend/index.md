@@ -27,9 +27,9 @@ description: 构建高性能、可扩展的服务端应用
   </h3>
   <div class="card-content">
     <p class="card-description">
-      Node.js 基础知识、Koa2.js 框架、Express 中间件、Node.js 面试题分享等服务器端 JavaScript 技术。
+      Node.js 基础知识、Koa2.js 框架、中间件、Node.js 面试题分享等服务器端 JavaScript 技术。
     </p>
-    <p><strong>标签：</strong> <span class="tag">Node.js</span> <span class="tag">Koa2</span> <span class="tag">Express</span> <span class="tag">中间件</span> <span class="tag">面试题</span></p>
+    <p><strong>标签：</strong> <span class="tag">Node.js</span> <span class="tag">Koa2</span> <span class="tag">中间件</span> <span class="tag">面试题</span></p>
   </div>
 </div>
 

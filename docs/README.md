@@ -5,7 +5,7 @@
 博客预览图
 
 <!-- 插入 /public/images/vlog_zhcn.gif -->
-<img src="./public/images/vlog_zhcn.gif" alt="Vlog-Virginia's Blog" width="100%">
+<img src="docs/public/images/vlog_zhcn.gif" alt="Vlog-Virginia's Blog" width="100%">
 
 ## ✨ 特性
 

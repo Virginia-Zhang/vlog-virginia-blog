@@ -338,7 +338,7 @@ export default defineConfig({
   },
 
   // 站点地图配置
-  sitemap: {
-    hostname: "https://your-domain.com",
-  },
+  // sitemap: {
+  //   hostname: "https://your-domain.com",
+  // },
 });

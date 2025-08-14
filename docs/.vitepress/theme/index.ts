@@ -36,7 +36,6 @@ export default {
 
     // 路由变化时的处理
     router.onAfterRouteChange = () => {
-      console.log("路由变化，重新设置标签监听器");
       // 为新页面的标签添加点击事件
       setupTagListeners();
     };
@@ -45,7 +44,6 @@ export default {
     if (typeof window !== "undefined") {
       // 确保在DOM完全加载后执行
       const initTagListeners = () => {
-        console.log("初始化标签监听器");
         setupTagListeners();
       };
 
@@ -58,7 +56,6 @@ export default {
 
       // 监听页面完全加载完成
       window.addEventListener("load", () => {
-        console.log("页面完全加载完成，再次设置标签监听器");
         setTimeout(setupTagListeners, 100);
       });
     }

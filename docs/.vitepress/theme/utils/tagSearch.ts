@@ -4,7 +4,13 @@
  */
 
 /**
- * 等待搜索框出现并设置值
+ * 等待搜索框出现并设置值，以确保网站初次加载完成时，点击标签也能正常触发搜索功能，标签文本可回显到搜索框里
+ * 使用轮询机制，每50ms检查一次搜索框是否加载出来，最多检查20次，避免无限循环
+ * 如果搜索框加载出来，则设置值并触发事件
+ * 如果搜索框没有加载出来，则继续等待
+ * 如果超过20次都没有加载出来，则返回false
+ *
+ *
  * @param tagName 标签名称
  * @param maxAttempts 最大尝试次数
  */
@@ -33,12 +39,10 @@ const waitForSearchInput = (
       const changeEvent = new Event("change", { bubbles: true });
       searchInput.dispatchEvent(changeEvent);
 
-      console.log(`搜索框值设置成功: ${tagName}`);
       return true;
     }
 
     if (attempts >= maxAttempts) {
-      console.warn(`搜索框未找到，已尝试 ${maxAttempts} 次`);
       return false;
     }
 
@@ -55,8 +59,6 @@ const waitForSearchInput = (
  */
 export const handleTagClick = (tagName: string): void => {
   if (typeof window !== "undefined") {
-    console.log(`点击标签: ${tagName}`);
-
     // 触发VitePress搜索功能
     const searchButton = document.querySelector(
       '.DocSearch-Button, .VPNavBarSearchButton, [aria-label="Search"]'
@@ -65,12 +67,10 @@ export const handleTagClick = (tagName: string): void => {
     if (searchButton) {
       // 点击搜索按钮打开搜索
       searchButton.click();
-      console.log("搜索按钮点击成功");
 
       // 使用更可靠的方式等待搜索框出现
       waitForSearchInput(tagName);
     } else {
-      console.log("未找到搜索按钮，使用键盘快捷键");
       // 使用键盘快捷键作为备选
       const event = new KeyboardEvent("keydown", {
         key: "k",
@@ -90,14 +90,10 @@ export const handleTagClick = (tagName: string): void => {
  */
 export const setupTagListeners = (): void => {
   if (typeof window !== "undefined") {
-    console.log("开始设置标签监听器");
-
     const setupListeners = () => {
       const tagElements = document.querySelectorAll(
         ".tag:not([data-clickable]), .hot-tag:not([data-clickable])"
       );
-
-      console.log(`找到 ${tagElements.length} 个标签元素`);
 
       tagElements.forEach((tag) => {
         // 标记为已处理，避免重复绑定
@@ -120,7 +116,6 @@ export const setupTagListeners = (): void => {
       const tagText = tag.textContent?.trim();
 
       if (tagText) {
-        console.log(`标签被点击: ${tagText}`);
         handleTagClick(tagText);
       }
     };
@@ -131,37 +126,6 @@ export const setupTagListeners = (): void => {
     // 如果页面还在加载中，等待DOMContentLoaded事件
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", setupListeners);
-    }
-
-    // 监听动态内容变化（如果有的话）
-    if (window.MutationObserver) {
-      const observer = new MutationObserver((mutations) => {
-        let shouldSetup = false;
-        mutations.forEach((mutation) => {
-          if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
-            mutation.addedNodes.forEach((node) => {
-              if (node.nodeType === Node.ELEMENT_NODE) {
-                const element = node as Element;
-                if (
-                  element.querySelector &&
-                  element.querySelector(".tag, .hot-tag")
-                ) {
-                  shouldSetup = true;
-                }
-              }
-            });
-          }
-        });
-
-        if (shouldSetup) {
-          setTimeout(setupListeners, 50);
-        }
-      });
-
-      observer.observe(document.body, {
-        childList: true,
-        subtree: true,
-      });
     }
   }
 };

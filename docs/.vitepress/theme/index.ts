@@ -36,20 +36,31 @@ export default {
 
     // 路由变化时的处理
     router.onAfterRouteChange = () => {
-      console.log("onAfterRouteChange");
+      console.log("路由变化，重新设置标签监听器");
       // 为新页面的标签添加点击事件
       setupTagListeners();
     };
 
     // 初始化时也要执行一次
     if (typeof window !== "undefined") {
-      window.addEventListener("DOMContentLoaded", setupTagListeners);
-      // 如果DOM已经加载完成，立即执行
-      if (document.readyState === "loading") {
-        document.addEventListener("DOMContentLoaded", setupTagListeners);
-      } else {
+      // 确保在DOM完全加载后执行
+      const initTagListeners = () => {
+        console.log("初始化标签监听器");
         setupTagListeners();
+      };
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initTagListeners);
+      } else {
+        // DOM已经加载完成，延迟一点执行以确保所有组件都已渲染
+        setTimeout(initTagListeners, 200);
       }
+
+      // 监听页面完全加载完成
+      window.addEventListener("load", () => {
+        console.log("页面完全加载完成，再次设置标签监听器");
+        setTimeout(setupTagListeners, 100);
+      });
     }
   },
 } satisfies Theme;

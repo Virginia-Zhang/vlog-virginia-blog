@@ -6,9 +6,7 @@
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs",
-    "serve": "vitepress serve docs",
-    "webp": "node scripts/convert-to-webp.js",
-    "webp:css": "node scripts/convert-to-webp.js docs/public/images/frontend/css --exclude hero_section.png,hero_section.webp --quality 85"
+    "serve": "vitepress serve docs"
   },
   "devDependencies": {
     "@types/node": "^20.11.5",

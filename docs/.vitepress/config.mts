@@ -431,6 +431,12 @@ export default defineConfig({
   // 站点地图配置
   sitemap: {
     hostname: "https://vlog-virginia-blog.pages.dev",
+    transformItems: (items) => {
+      return items.map((item) => ({
+        ...item,
+        lastmod: new Date().toISOString(),
+      }));
+    },
   },
 
   // 静态资源配置

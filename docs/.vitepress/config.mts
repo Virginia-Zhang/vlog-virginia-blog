@@ -152,6 +152,7 @@ const sidebar = {
 export default defineConfig({
   title: "Vlog-Virginia's Blog",
   description: "全栈开发技术分享、外语指北与生活记录",
+  base: "/",
 
   // 多语言配置
   locales: {
@@ -308,9 +309,71 @@ export default defineConfig({
       "meta",
       { name: "description", content: "全栈开发技术分享、外语指北与生活记录" },
     ],
-    //
-    ["meta", { name: "og:type", content: "website" }],
-    ["meta", { name: "og:site_name", content: "Vlog - Virginia's Blog" }],
+    // SEO优化
+    [
+      "meta",
+      {
+        name: "keywords",
+        content:
+          "前端开发,后端开发,全栈开发,Vue,React,JavaScript,Java,Node.js,技术博客,外语学习,英语,日语",
+      },
+    ],
+    ["meta", { name: "author", content: "Virginia" }],
+    ["meta", { name: "robots", content: "index, follow" }],
+    ["meta", { name: "googlebot", content: "index, follow" }],
+    // Open Graph
+    ["meta", { property: "og:type", content: "website" }],
+    ["meta", { property: "og:site_name", content: "Vlog-Virginia's Blog" }],
+    [
+      "meta",
+      {
+        property: "og:title",
+        content: "Vlog-Virginia's Blog - 全栈开发技术分享",
+      },
+    ],
+    [
+      "meta",
+      {
+        property: "og:description",
+        content: "全栈开发技术分享、外语指北与生活记录",
+      },
+    ],
+    [
+      "meta",
+      { property: "og:url", content: "https://vlog-virginia-blog.pages.dev" },
+    ],
+    [
+      "meta",
+      {
+        property: "og:image",
+        content:
+          "https://vlog-virginia-blog.pages.dev/images/og-image-zh-CN.png",
+      },
+    ],
+    // Twitter Card
+    ["meta", { name: "twitter:card", content: "summary_large_image" }],
+    [
+      "meta",
+      {
+        name: "twitter:title",
+        content: "Vlog-Virginia's Blog - 全栈开发技术分享",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "twitter:description",
+        content: "全栈开发技术分享、外语指北与生活记录",
+      },
+    ],
+    [
+      "meta",
+      {
+        name: "twitter:image",
+        content:
+          "https://vlog-virginia-blog.pages.dev/images/og-image-zh-CN.png",
+      },
+    ],
     // 预加载字体
     ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
     [
@@ -329,6 +392,34 @@ export default defineConfig({
     // 预加载Giscus
     ["link", { rel: "preconnect", href: "https://giscus.app" }],
     ["link", { rel: "dns-prefetch", href: "https://giscus.app" }],
+    // 结构化数据
+    [
+      "script",
+      { type: "application/ld+json" },
+      JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "Vlog-Virginia's Blog",
+        description: "全栈开发技术分享、外语指北与生活记录",
+        url: "https://vlog-virginia-blog.pages.dev",
+        author: {
+          "@type": "Person",
+          name: "Virginia",
+          url: "https://github.com/Virginia-Zhang",
+        },
+        publisher: {
+          "@type": "Person",
+          name: "Virginia",
+        },
+        inLanguage: "zh-CN",
+        potentialAction: {
+          "@type": "SearchAction",
+          target:
+            "https://vlog-virginia-blog.pages.dev/?q={search_term_string}",
+          "query-input": "required name=search_term_string",
+        },
+      }),
+    ],
   ],
 
   // Markdown配置
@@ -338,7 +429,11 @@ export default defineConfig({
   },
 
   // 站点地图配置
-  // sitemap: {
-  //   hostname: "https://your-domain.com",
-  // },
+  sitemap: {
+    hostname: "https://vlog-virginia-blog.pages.dev",
+  },
+
+  // 静态资源配置
+  srcDir: ".",
+  outDir: ".vitepress/dist",
 });

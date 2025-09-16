@@ -6,6 +6,10 @@
 
 <img src="https://vlog-virginia-blog.pages.dev/images/vlog_zhcn.gif" alt="Vlog-Virginia's Blog" width="100%">
 
+博客地址
+
+https://vlog-virginia-blog.pages.dev/
+
 ## ✨ 特性
 
 - 🎨 **现代化设计** - 基于 VitePress 和 自定义设计样式 的精美界面
@@ -280,18 +284,11 @@ jobs:
 2. 在仓库设置中启用 GitHub Pages
 3. 推送代码到 main 分支
 
-### Vercel
+### Vercel/Netlify/CloudFlare Pages
 
-1. 连接 GitHub 仓库到 Vercel
+1. 连接 GitHub 仓库到 Vercel/Netlify/CloudFlare Pages
 2. 设置构建命令：`npm run build`
 3. 设置输出目录：`docs/.vitepress/dist`
-4. 部署
-
-### Netlify
-
-1. 连接 GitHub 仓库到 Netlify
-2. 设置构建命令：`npm run build`
-3. 设置发布目录：`docs/.vitepress/dist`
 4. 部署
 
 ## 🛠️ 开发

@@ -6,7 +6,7 @@
 
 <img src="https://vlog-virginia-blog.pages.dev/images/vlog_zhcn.gif" alt="Vlog-Virginia's Blog" width="100%">
 
-博客地址
+博客地址（欢迎访问和交换友链！）
 
 https://vlog-virginia-blog.pages.dev/
 
